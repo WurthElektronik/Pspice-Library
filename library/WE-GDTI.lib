@@ -1,0 +1,94 @@
+**************************************************
+* Manufacturer:           Wurth Elektronik 
+* Kinds:                  Gate-Drive-Transformer
+* Matchcode:              WE-GDTI
+* Library Type:           LTspice
+* Version:                rev22a
+* Created/modified by:    Toby      
+* Date and Time:          2022-05-23
+* Team:                   eiSos EDA Service  
+* Contact:                libraries@we-online.com
+**************************************************
+* Copyright(C) 2022 Würth Elektronik eiSos GmbH & Co. KG
+* All Rights Reserved.
+**************************************************
+* Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
+* of the simulation models provided, Würth Elektronik eiSos does not guarantee the exemption of error on
+* the simulation models, nor does Würth Elektronik eiSos guarantee that the simulation model is current.
+* Würth Elektronik eiSos reserves the right to make any adjustments at any time without notice.
+* Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.
+**************************************************
+.SUBCKT GDTI_EP7_760301301 1 2 3 4 5 6
+L1 2 N001b 1060u 
+Rser1 N001b N001 0.84
+L2 4 3b 1060u
+Rser2 3b 3 0.97
+L4 1 N001 2.8u
+C1 3 N001 5.5p
+L3 6 5b 1060u
+Rser3 5b 5 0.97
+C2 6 2 5.5p
+k1 L1 L2 L3 1
+.ENDS GDTI_EP7_760301301
+
+.SUBCKT GDTI_EP7_760301302 1 2 3 4
+L1 2 N001b 1060u 
+Rser1 N001b N001 0.84
+L2 4 3b 1060u 
+Rser2 3b 3 0.99
+L3 1 N001 2.3u
+C1 3 N001 11p
+k1 L1 L2 1
+.ENDS GDTI_EP7_760301302
+
+.SUBCKT GDTI_EP7_760301303 1 2 3 4 5 6
+L1 2 N001b 1060u 
+Rser1 N001b N001 0.84
+L2 4 3b 265u
+Rser2 3b 3 0.5
+L4 1 N001 2.7u
+C1 3 N001 5.5p
+L3 6 5b 265u 
+Rser3 5b 5 0.5
+C2 6 2 5.5p
+k1 L1 L2 L3 1
+.ENDS GDTI_EP7_760301303
+
+.SUBCKT GDTI_EP7_760301304 1 2 3 4 5 6
+L1 2 N001b 1410u 
+Rser1 N001b N001 1
+L2 4 3b 225.6u 
+Rser2 3b 3 0.45
+L4 1 N001 3.8u
+C1 3 N001 5.5p
+L3 6 5b 225.6u
+Rser3 5b 5 0.45
+C2 6 2 5.5p
+k1 L1 L2 L3 1
+.ENDS GDTI_EP7_760301304
+
+.SUBCKT GDTI_EP7_760301305 1 2 3 4 5 6
+L1 2 N001b 1050u 
+Rser1 N001b N001 0.82
+L2 4 3b 467u 
+Rser2 3b 3 0.64
+L4 1 N001 2.6u
+C1 3 N001 5.5p
+L3 6 5b 467u
+Rser3 5b 5 0.64
+C2 6 2 5.5p
+k1 L1 L2 L3 1
+.ENDS GDTI_EP7_760301305
+
+.SUBCKT GDTI_EP7_760301306 1 2 3 4 5 6
+L1 2 N001b 2900u 
+Rser1 N001b N001 1.25
+L2 4 3b 322u 
+Rser2 3b 3 0.52
+L4 1 N001 6.8u
+C1 3 N001 5.5p
+L3 6 5b 322u
+Rser3 5b 5 0.52
+C2 6 2 5.5p
+k1 L1 L2 L3 1
+.ENDS GDTI_EP7_760301306

@@ -1,0 +1,48 @@
+**************************************************
+* Manufacturer:          Wurth Elektronik 
+* Kinds:                 Rod Core Inductor SMT
+* Matchcode:             WE-RCIS
+* Library Type:          Pspice
+* Version:               rev22a
+* Created/modified by:   Ella
+* Date and Time:         6/8/2022
+* Team:                  eiSos EDA Service  
+* Contact:               libraries@we-online.com
+**************************************************
+* Copyright(C) 2022 Würth Elektronik eiSos GmbH & Co. KG
+* All Rights Reserved.
+**************************************************
+* Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
+* of the simulation models provided, Würth Elektronik eiSos does not guarantee the exemption of error on
+* the simulation models, nor does Würth Elektronik eiSos guarantee that the simulation model is current.
+* Würth Elektronik eiSos reserves the right to make any adjustments at any time without notice.
+* Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.
+**************************************************
+.subckt RCIS_7847227010_1u 1 2
+Rp 1 2 4761
+Cp 1 2 0.96078p
+Rs 1 N3 0.002
+L1 N3 2 0.615082u
+.ends RCIS_7847227010_1u
+*******
+.subckt RCIS_7847227027_2u72 1 2
+Rp 1 2 11385
+Cp 1 2 1.139p
+Rs 1 N3 0.0064
+L1 N3 2 1.547u
+.ends RCIS_7847227027_2u72
+*******
+.subckt RCIS_7847229020_1u96 1 2
+Rp 1 2 10064
+Cp 1 2 1.214p
+Rs 1 N3 0.0024
+L1 N3 2 1.147u
+.ends RCIS_7847229020_1u96
+*******
+.subckt RCIS_7847232045_4u45 1 2
+Rp 1 2 3427
+Cp 1 2 4.56p
+Rs 1 N3 0.0038
+L1 N3 2 3.237u
+.ends RCIS_7847232045_4u45
+*******

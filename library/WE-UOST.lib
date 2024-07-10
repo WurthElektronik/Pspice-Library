@@ -1,0 +1,251 @@
+**************************************************
+* Manufacturer:           Wurth Elektronik 
+* Kinds:                  Universal Offline Standard Transformers
+* Matchcode:              WE-UOST
+* Library Type:           LTspice
+* Version:                rev22a
+* Created/modified by:    Toby      
+* Date and Time:          2022-05-17
+* Team:                   eiSos EDA Service  
+* Contact:                libraries@we-online.com
+**************************************************
+* Copyright(C) 2022 Würth Elektronik eiSos GmbH & Co. KG	
+* All Rights Reserved.	
+**************************************************	
+* Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy	
+* of the simulation models provided, Würth Elektronik eiSos does not guarantee the exemption of error on	
+* the simulation models, nor does Würth Elektronik eiSos guarantee that the simulation model is current.	
+* Würth Elektronik eiSos reserves the right to make any adjustments at any time without notice.	
+* Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.	
+**************************************************	
+.subckt	UOST_EE16_760875532		9  7  12  11  1  2  3  5	
+.param RxLkg=14868.88ohm				
+.param Leakage=49uh				
+Rlkg	9	9a	{RxLkg}	
+L_Lkg	9	9a	{Leakage}	
+Lpri1	9a	7b	1451uH	
+Rser1	7b	7	5500mohm	
+Laux1	12	11a	15uH	
+Rser3	11a	11	300mohm	
+Lsec1	1	2a	5.859uH	
+Rser5	2a	2	70mohm	
+Lsec2	3	5a	2.871uH	
+Rser6	5a	5	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=18.1pf				
+.param Rdmp1=455169.65ohm				
+Cpri1	9	7a	{Cprm1}	
+Rser13	7a	7	10mohm	
+Rdmp1	9	7	{Rdmp1}	
+Rg3	9	0	20meg	
+Rg5	12	0	20meg	
+Rg7	7	0	20meg	
+Rg9	11	0	20meg	
+Rg11	1	0	20meg	
+Rg12	3	0	20meg	
+Rg19	2	0	20meg	
+Rg20	5	0	20meg	
+.ends		
+		
+.subckt	UOST_EE16_760875131		9  7  12  11  1  4  3  6	
+.param RxLkg=15989.98ohm				
+.param Leakage=45uh				
+Rlkg	9	9a	{RxLkg}	
+L_Lkg	9	9a	{Leakage}	
+Lpri1	9a	7b	1455uH	
+Rser1	7b	7	3400mohm	
+Laux1	12	11a	15uH	
+Rser3	11a	11	280mohm	
+Lsec1	1	4a	11.484uH	
+Rser5	4a	4	110mohm	
+Lsec2	3	6a	11.484uH	
+Rser6	6a	6	110mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=13.2pf				
+.param Rdmp1=532999.47ohm				
+Cpri1	9	7a	{Cprm1}	
+Rser13	7a	7	10mohm	
+Rdmp1	9	7	{Rdmp1}	
+Rg3	9	0	20meg	
+Rg5	12	0	20meg	
+Rg7	7	0	20meg	
+Rg9	11	0	20meg	
+Rg11	1	0	20meg	
+Rg12	3	0	20meg	
+Rg19	4	0	20meg	
+Rg20	6	0	20meg	
+.ends	
+			
+.subckt	UOST_EE16_760875112		9  7  12  11  1  4  3  6	
+.param RxLkg=13820.44ohm				
+.param Leakage=38uh				
+Rlkg	9	9a	{RxLkg}	
+L_Lkg	9	9a	{Leakage}	
+Lpri1	9a	7b	1462uH	
+Rser1	7b	7	3400mohm	
+Laux1	12	11a	18.984uH	
+Rser3	11a	11	300mohm	
+Lsec1	1	4a	2.871uH	
+Rser5	4a	4	20mohm	
+Lsec2	3	6a	2.871uH	
+Rser6	6a	6	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=12.6pf				
+.param Rdmp1=545543.85ohm				
+Cpri1	9	7a	{Cprm1}	
+Rser13	7a	7	10mohm	
+Rdmp1	9	7	{Rdmp1}	
+Rg3	9	0	20meg	
+Rg5	12	0	20meg	
+Rg7	7	0	20meg	
+Rg9	11	0	20meg	
+Rg11	1	0	20meg	
+Rg12	3	0	20meg	
+Rg19	4	0	20meg	
+Rg20	6	0	20meg	
+.ends	
+			
+.subckt	UOST_EE16_760871142		9  7  12  11  1  4  3  6	
+.param RxLkg=13403.39ohm				
+.param Leakage=32uh				
+Rlkg	9	9a	{RxLkg}	
+L_Lkg	9	9a	{Leakage}	
+Lpri1	9a	7b	1218uH	
+Rser1	7b	7	2400mohm	
+Laux1	12	11a	16.327uH	
+Rser3	11a	11	300mohm	
+Lsec1	1	4a	46.492uH	
+Rser5	4a	4	430mohm	
+Lsec2	3	6a	46.492uH	
+Rser6	6a	6	460mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=11.4pf				
+.param Rdmp1=523569.98ohm				
+Cpri1	9	7a	{Cprm1}	
+Rser13	7a	7	10mohm	
+Rdmp1	9	7	{Rdmp1}	
+Rg3	9	0	20meg	
+Rg5	12	0	20meg	
+Rg7	7	0	20meg	
+Rg9	11	0	20meg	
+Rg11	1	0	20meg	
+Rg12	3	0	20meg	
+Rg19	4	0	20meg	
+Rg20	6	0	20meg	
+.ends	
+			
+.subckt	UOST_EE16_760871534		9  7  12  11  1  2  3  5	
+.param RxLkg=10527.1ohm				
+.param Leakage=26uh				
+Rlkg	9	9a	{RxLkg}	
+L_Lkg	9	9a	{Leakage}	
+Lpri1	9a	7b	1224uH	
+Rser1	7b	7	2400mohm	
+Laux1	12	11a	20.663uH	
+Rser3	11a	11	300mohm	
+Lsec1	1	2a	5.166uH	
+Rser5	2a	2	200mohm	
+Lsec2	3	5a	3.125uH	
+Rser6	5a	5	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=12.2pf				
+.param Rdmp1=506110.58ohm				
+Cpri1	9	7a	{Cprm1}	
+Rser13	7a	7	10mohm	
+Rdmp1	9	7	{Rdmp1}	
+Rg3	9	0	20meg	
+Rg5	12	0	20meg	
+Rg7	7	0	20meg	
+Rg9	11	0	20meg	
+Rg11	1	0	20meg	
+Rg12	3	0	20meg	
+Rg19	2	0	20meg	
+Rg20	5	0	20meg	
+.ends		
+		
+.subckt	UOST_EE16_760871543		9  7  12  11  1  2  3  5	
+.param RxLkg=12729.29ohm				
+.param Leakage=30uh				
+Rlkg	9	9a	{RxLkg}	
+L_Lkg	9	9a	{Leakage}	
+Lpri1	9a	7b	1280uH	
+Rser1	7b	7	2400mohm	
+Laux1	12	11a	17.11uH	
+Rser3	11a	11	200mohm	
+Lsec1	1	2a	32.349uH	
+Rser5	2a	2	400mohm	
+Lsec2	3	5a	2.406uH	
+Rser6	5a	5	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=10.6pf				
+.param Rdmp1=555845.82ohm				
+Cpri1	9	7a	{Cprm1}	
+Rser13	7a	7	10mohm	
+Rdmp1	9	7	{Rdmp1}	
+Rg3	9	0	20meg	
+Rg5	12	0	20meg	
+Rg7	7	0	20meg	
+Rg9	11	0	20meg	
+Rg11	1	0	20meg	
+Rg12	3	0	20meg	
+Rg19	2	0	20meg	
+Rg20	5	0	20meg	
+.ends		
+		
+.subckt	UOST_EE16_760871113		9  7  12  11  1  4  3  6	
+.param RxLkg=12013.76ohm				
+.param Leakage=30uh				
+Rlkg	9	9a	{RxLkg}	
+L_Lkg	9	9a	{Leakage}	
+Lpri1	9a	7b	1280uH	
+Rser1	7b	7	2400mohm	
+Laux1	12	11a	17.11uH	
+Rser3	11a	11	300mohm	
+Lsec1	1	4a	2.406uH	
+Rser5	4a	4	20mohm	
+Lsec2	3	6a	2.406uH	
+Rser6	6a	6	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=11.9pf				
+.param Rdmp1=524601.05ohm				
+Cpri1	9	7a	{Cprm1}	
+Rser13	7a	7	10mohm	
+Rdmp1	9	7	{Rdmp1}	
+Rg3	9	0	20meg	
+Rg5	12	0	20meg	
+Rg7	7	0	20meg	
+Rg9	11	0	20meg	
+Rg11	1	0	20meg	
+Rg12	3	0	20meg	
+Rg19	4	0	20meg	
+Rg20	6	0	20meg	
+.ends		
+		
+.subckt	UOST_EE16_760871135		9  7  12  11  1  4  3  6	
+.param RxLkg=19686.23ohm				
+.param Leakage=47uh				
+Rlkg	9	9a	{RxLkg}	
+L_Lkg	9	9a	{Leakage}	
+Lpri1	9a	7b	1203uH	
+Rser1	7b	7	2400mohm	
+Laux1	12	11a	15.206uH	
+Rser3	11a	11	400mohm	
+Lsec1	1	4a	11.421uH	
+Rser5	4a	4	80mohm	
+Lsec2	3	6a	11.421uH	
+Rser6	6a	6	80mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=11.4pf				
+.param Rdmp1=523569.98ohm				
+Cpri1	9	7a	{Cprm1}	
+Rser13	7a	7	10mohm	
+Rdmp1	9	7	{Rdmp1}	
+Rg3	9	0	20meg	
+Rg5	12	0	20meg	
+Rg7	7	0	20meg	
+Rg9	11	0	20meg	
+Rg11	1	0	20meg	
+Rg12	3	0	20meg	
+Rg19	4	0	20meg	
+Rg20	6	0	20meg	
+.ends	

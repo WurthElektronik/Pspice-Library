@@ -1,0 +1,483 @@
+**************************************************
+* Manufacturer:           Wurth Elektronik 
+* Kinds:                  SMT Common Mode Line Filter
+* Matchcode:              WE-SL 
+* Library Type:           Pspice
+* Version:                rev22a
+* Created/modified by:    Ella      
+* Date and Time:          2022-05-26
+* Team:                   eiSos EDA Service  
+* Contact:                libraries@we-online.com
+**************************************************
+* Copyright(C) 2022 Würth Elektronik eiSos GmbH & Co. KG
+* All Rights Reserved.
+**************************************************
+* Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
+* of the simulation models provided, Würth Elektronik eiSos does not guarantee the exemption of error on
+* the simulation models, nor does Würth Elektronik eiSos guarantee that the simulation model is current.
+* Würth Elektronik eiSos reserves the right to make any adjustments at any time without notice.
+* Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.
+**************************************************
+.subckt SL_1310_744202_1m 1 2 3 4 PARAMS:
++  L1=341.04u
++  L2=448.57u
++  L3=136.82u
++  L4=49.76u
++  L5=90n
++  C1=2.9p
++  C2=1.5p
++  RS1=4964.13
++  RS2=2973.53
++  RS3=2668.71
++  RS4=965.96
++  RS5=690
++  R2=1.41
++  Rdc=0.5
++  L=65mm
++  dL3=720n
++  dC3=56p
++  DR3=0.6
++  DR4=230
++  L100=65mm
++  dL4=19000n
++  dC4=19p
++  DR5=0.01
+T_T1  N02412  0  N01263  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+L_L2  N01123  4  {L1}
+L_L4  N01127  N01123  {L2}
+L_L6  N01131  N01127  {L3}
+L_L8  N01135  N01131  {L4}
+L_L9  N01499  N01326  {L5}
+L_L10  N01263  N01135  {L5}
+R_R1  N01123  4  {Rs1}
+R_R2  N01127  N01123  {Rs2}
+R_R3  N01131  N01127  {Rs3}
+R_R4  N01135  N01131  {Rs4}
+R_R5  N01499  N01326  {Rs5}
+R_R10  N01263  N01135  {Rs5}
+C_C1  N01135  4  {C1}
+C_C3  N01263  N01135  {C2}
+C_C4  N01499  N01326  {C2}
+C_C5  N01326  3  {C1}
+L_L11  N01326  N01338  {L4}
+L_L14  N01403  3  {L1}
+R_R11  N01326  N01338  {Rs4}
+R_R13  N01372  N01403  {Rs2}
+L_L13  N01372  N01403  {L2}
+R_R12  N01338  N01372  {Rs3}
+R_R14  N01403  3  {Rs1}
+L_L12  N01338  N01372  {L3}
+R_R15  N02412  N01263  {dR5}
+R_R16  N02481  N02458  {dR5}
+R_R17  N02435  N02412  {dR4}
+R_R18  N02458  N02435  {dR4}
+R_R19  N02504  N02481  {dR5}
+R_R20  N02527  N02504  {dR4}
+T_T2  N02435  0  N02412  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+T_T7  N02481  0  N02458  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+T_T8  N02504  0  N02481  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+R_R21  1  N02527  {Rdc}
+R_R22  2  N01499  {Rdc}
+T_T9  N02527  0  N02504  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+T_T10  N02458  0  N02435  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+Kn_K1  L_L9  L_L10  1
+Kn_K2  L_L8  L_L11  1
+Kn_K3  L_L6  L_L12  1
+Kn_K4  L_L4  L_L13  1
+Kn_K5  L_L2  L_L14  1
+.ends SL_1310_744202_1m
+*******
+.subckt SL_1310_744203_500u 1 2 3 4 PARAMS:
++  L1=0.00037
++  L2=0.000000506
++  L3=0.000001158
++  L4=0.000000681
++  L5=0.00000348
++  L6=0.0012u
++  C1=0.00000000000169
++  C2=0.00000000000317
++  C3=0.00000000000275
++  RS1=5950
++  RS2=14800
++  RS3=4400
++  RS4=50
++  RS5=960
++  RS6=4765
++  R2=99
++  Rdc=0.36
++  L=65mm
++  dL3=630n
++  dC3=20p
++  DR3=0.36
++  DR4=340
++  L100=65mm
++  dL4=8000n
++  dC4=19p
++  DR5=0.01
++  DR6=0.35
+L_L13  N07978  N07990  {L2}
+R_R3  N07446  N07474  {Rs3}
+C_C1  N07038  N07046  {C1}
+T_T7  N07190  0  N07206  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+Kn_K4  L_L4  L_L13  1
+L_L8  N07038  N07446  {L4}
+R_R13  N07978  N07990  {Rs2}
+L_L14  N07990  3  {L1}
+R_R2  N07474  N07498  {Rs2}
+C_C3  N07054  N07038  {C2}
+T_T10  N07206  0  N07222  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+Kn_K5  L_L2  L_L14  1
+L_L6  N07446  N07474  {L3}
+R_R14  N07990  3  {Rs1}
+R_R17  N07222  N07238  {dR4}
+R_R1  N07498  4  {Rs1}
+R_R5  N08010  N07958  {Rs5}
+R_R20  N07166  N07174  {dR4}
+T_T2  N07222  0  N07238  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+Kn_K1  L_L9  L_L10  1
+R_R22  2  N08112  {Rdc}
+L_L4  N07474  N07498  {L2}
+R_R15  N07238  N07254  {dR5}
+L_L10  N07054  N07038  {L5}
+C_C4  N08010  N07958  {C2}
+R_R19  N07174  N07190  {dR5}
+T_T1  N07238  0  N07254  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+L_L9  N08010  N07958  {L5}
+L_L2  N07498  4  {L1}
+L_L11  N07958  N07966  {L4}
+Kn_K2  L_L8  L_L11  1
+C_C5  N07958  N08246  {C1}
+T_T9  N07166  0  N07174  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+R_R16  N07190  N07206  {dR5}
+R_R10  N07054  N07038  {Rs5}
+R_R11  N07958  N07966  {Rs4}
+L_L12  N07966  N07978  {L3}
+R_R4  N07038  N07446  {Rs4}
+Kn_K3  L_L6  L_L12  1
+T_T8  N07174  0  N07190  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+R_R18  N07206  N07222  {dR4}
+R_R21  1  N07166  {Rdc}
+R_R12  N07966  N07978  {Rs3}
+C_C6  N07254  N07054  {C3}
+L_L15  N07254  N07054  {L6}
+R_R23  N07254  N07054  {Rs6}
+L_L16  N08112  N08010  {L6}
+C_C7  N08112  N08010  {C3}
+R_R24  N08112  N08010  {Rs6}
+Kn_K6  L_L15  L_L16  1
+R_R25  N07046  4  {R2}
+R_R26  N08246  3  {R2}
+.ends SL_1310_744203_500u
+*******
+.subckt SL_1310_744204_250u 1 2 3 4 PARAMS:
++  L0=0.000025
++  L1=0.0000000009
++  L2=0.000142
++  L3=0.00000567
++  L4=0.000001
++  L5=0.0000028
++  L6=4.5n
++  C1=0.0000000000027
++  C2=0.00000000000175
++  C3=0.000000000000759
++  RS1=1100
++  RS2=1925
++  RS3=73
++  RS4=1461
++  RS5=1083
++  RS6=1021
++  Rs0=849
++  R2=90
++  L100=65mm
++  dL4=8000n
++  dC4=15.5p
++  DR5=0.01
++  Rdc=0.36
++  L=65mm
++  dL3=370n
++  dC3=26p
++  DR3=0.36
++  DR4=500
+R_R19  N10642  N10658  {dR5}TC=0,0    
+L_L16  N11570  N11578  {L6}
+T_T9  N10634  0  N10642  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+L_L11  N11522  N11526  {L4}
+L_L6  N10934  N10962  {L3}
+Kn_K2  L_L8  L_L11  1
+R_R11  N11522  N11526  {Rs4}TC=0,0    
+R_R3  N10934  N10962  {Rs3}TC=0,0    
+R_R16  N10658  N10674  {dR5}TC=0,0    
+C_C4  N11578  N11522  {C2}TC=0,0    
+T_T8  N10642  0  N10658  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+L_L12  N11526  N11538  {L3}
+Kn_K3  L_L6  L_L12  1
+L_L8  N10490  N10934  {L4}
+R_R12  N11526  N11538  {Rs3}TC=0,0    
+C_C1  N10490  N10498  {C1}TC=0,0    
+R_R2  N10962  N10986  {Rs2}TC=0,0    
+C_C5  N11522  N11886  {C1}TC=0,0    
+R_R18  N10674  N10690  {dR4}TC=0,0    
+T_T7  N10658  0  N10674  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+L_L13  N11538  N11550  {L2}
+Kn_K4  L_L4  L_L13  1
+L_L4  N10962  N10986  {L2}
+R_R13  N11538  N11550  {Rs2}TC=0,0    
+C_C6  N10506  N10514  {C3}TC=0,0    
+R_R1  N10986  N11014  {Rs1}TC=0,0    
+R_R17  N10690  N10706  {dR4}TC=0,0    
+T_T10  N10674  0  N10690  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+L_L14  N11550  N11562  {L1}
+Kn_K5  L_L2  L_L14  1
+L_L2  N10986  N11014  {L1}
+R_R14  N11550  N11562  {Rs1}TC=0,0    
+C_C3  N10514  N10490  {C2}TC=0,0    
+R_R23  N10506  N10514  {Rs6}TC=0,0    
+L_L15  N10506  N10514  {L6}
+R_R15  N10706  N10506  {dR5}TC=0,0    
+T_T2  N10690  0  N10706  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+R_R22  2  N11570  {Rdc}TC=0,0    
+R_R21  1  N10634  {Rdc}TC=0,0  
+Kn_K1  L_L9  L_L10  1
+C_C7  N11570  N11578  {C3}TC=0,0    
+L_L10  N10514  N10490  {L5}
+R_R20  N10634  N10642  {dR4}TC=0,0    
+R_R5  N11578  N11522  {Rs5}TC=0,0    
+R_R10  N10514  N10490  {Rs5}TC=0,0    
+T_T1  N10706  0  N10506  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+R_R24  N11570  N11578  {Rs6}TC=0,0    
+Kn_K6  L_L15  L_L16  1
+L_L9  N11578  N11522  {L5}
+R_R4  N10490  N10934  {Rs4}TC=0,0    
+L_L17  N11014  4  {L0}
+R_R25  N11014  4  {Rs0}TC=0,0    
+L_L19  N11562  3  {L0}
+R_R26  N11562  3  {Rs0}TC=0,0    
+Kn_K7  L_L17  L_L19  1
+R_R27  N10498  4  {R2}TC=0,0    
+R_R28  N11886  3  {R2}TC=0,0      
+.ends SL_1310_744204_250u
+*******
+.subckt SL_1310_744205_100u 1 2 3 4 PARAMS:
++  L1=70u
++  L2=20u
++  L3=10n
++  L4=10n
++  C1=650.06f
++  C2=90.02f
++  C3=10.02f
++  RS1=1100
++  RS4=15
++  RS5=420
++  RS6=5
++  R2=4.41
++  Rdc=0.1
++  L=65mm
++  dL3=840n
++  dC3=18p
++  DR3=0.2
++  DR4=800
++  L100=65mm
++  dL4=2400n
++  dC4=9p
++  DR5=0.01
++  DR6=250
+T_T9  N10634  0  N10642  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+L_L8  N10490  N10934  {L2}
+C_C1  N10490  N10498  {C1}
+T_T7  N10658  0  N10674  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+T_T8  N10642  0  N10658  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+C_C6  N10506  N10514  {C3}
+R_R17  N10674  N10706  {dR4}
+Kn_K5  L_L6  L_L17  1
+C_C3  N10514  N10490  {C2}
+R_R22  2  N11688  {Rdc}
+L_L15  N10506  N10514  {L4}
+Kn_K1  L_L19  L_L10  1
+T_T2  N10674  0  N10706  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+R_R21  1  N10634  {Rdc}
+L_L10  N10514  N10490  {L3}
+R_R20  N10634  N10642  {dR4}
+R_R23  N10506  N10514  {Rs6}
+R_R4  N10490  N10934  {Rs4}
+R_R19  N10642  N10658  {dR5}
+Kn_K6  L_L15  L_L18  1
+L_L6  N10934  4  {L1}
+R_R10  N10514  N10490  {Rs5}
+R_R3  N10934  4  {Rs1}
+R_R16  N10658  N10674  {dR5}
+Kn_K2  L_L8  L_L16  1
+R_R25  N10498  4  {R2}
+C_C7  N12958  N12966  {C1}
+L_L16  N12958  N13114  {L2}
+R_R26  N12966  3  {R2}
+L_L17  N13114  3  {L1}
+C_C8  N12978  N12986  {C3}
+R_R29  N12958  N13114  {Rs4}
+C_C9  N12986  N12958  {C2}
+R_R30  N13114  3  {Rs1}
+R_R27  N12978  N12986  {Rs6}
+L_L18  N12978  N12986  {L4}
+R_R28  N12986  N12958  {Rs5}
+L_L19  N12986  N12958  {L3}
+R_R31  N11688  N12978  {Rdc}
+R_R32  N10706  N10506  {Rdc}  
+.ends SL_1310_744205_100u
+*******
+.subckt SL_1310_744206_60u 1 2 3 4 PARAMS:
++  L1=0.000059
++  L2=0.000000897
++  L3=0.00000839
++  L4=0.00000464
++  L5  3.685E-09  
++  L6  1.2E-09  
++  C1=0.000000000000468
++  C5=0.000000000000185
++  C6=0.000000000000328
++  RS1=2134
++  RS2=2105
++  RS3=1710
++  RS4=669
++  R5=677
++  R6=2919
++  R2=0.05
++  Rdc=0.16
++  L=65mm
++  dL3=330n
++  dC3=34p
++  DR3=0.16
++  DR4=390
++  L100=65mm
++  dL4=8000n
++  dC4=19p
++  DR5=0.01
+L_L13  N07978  N07990  {L2}
+R_R3  N07446  N07474  {Rs3}
+C_C1  N07038  N07046  {C1}
+T_T7  N07190  0  N07206  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+Kn_K4  L_L4  L_L13  1
+L_L8  N07038  N07446  {L4}
+R_R13  N07978  N07990  {Rs2}
+L_L14  N07990  3  {L1}
+R_R2  N07474  N07498  {Rs2}
+C_C3  N07054  N07038  {C5}
+T_T10  N07206  0  N07222  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+Kn_K5  L_L2  L_L14  1
+L_L6  N07446  N07474  {L3}
+R_R14  N07990  3  {Rs1}
+R_R17  N07222  N07238  {dR4}
+R_R1  N07498  4  {Rs1}
+R_R5  N08010  N07958  {R5}
+R_R20  N07166  N07174  {dR4}
+T_T2  N07222  0  N07238  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+Kn_K1  L_L9  L_L10  1
+R_R22  2  N08112  {Rdc}
+L_L4  N07474  N07498  {L2}
+R_R15  N07238  N07254  {dR5}
+L_L10  N07054  N07038  {L5}
+C_C4  N08010  N07958  {C5}
+R_R19  N07174  N07190  {dR5}
+T_T1  N07238  0  N07254  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+L_L9  N08010  N07958  {L5}
+L_L2  N07498  4  {L1}
+L_L11  N07958  N07966  {L4}
+Kn_K2  L_L8  L_L11  1
+C_C5  N07958  N08246  {C1}
+T_T9  N07166  0  N07174  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+R_R16  N07190  N07206  {dR5}
+R_R10  N07054  N07038  {R5}
+R_R11  N07958  N07966  {Rs4}
+L_L12  N07966  N07978  {L3}
+R_R4  N07038  N07446  {Rs4}
+Kn_K3  L_L6  L_L12  1
+T_T8  N07174  0  N07190  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+R_R18  N07206  N07222  {dR4}
+R_R21  1  N07166  {Rdc}
+R_R12  N07966  N07978  {Rs3}
+C_C6  N07254  N07054  {C6}
+L_L15  N07254  N07054  {L6}
+R_R23  N07254  N07054  {R6}
+L_L16  N08112  N08010  {L6}
+C_C7  N08112  N08010  {C6}
+R_R24  N08112  N08010  {R6}
+Kn_K6  L_L15  L_L16  1
+R_R25  N07046  4  {R2}
+R_R26  N08246  3  {R2}
+.ends SL_1310_744206_60u
+*******
+.subckt SL_1310_744207_35u 1 2 3 4 PARAMS:
++  L1=0.000037
++  L2=0.0000003
++  L3=0.00000566
++  L4=0.00000316
++  L5=0.00000000317
++  L6=0.0012u
++  C1=0.000000000000422
++  C2=0.000000000000384
++  C3=0.00000000000004
++  RS1=1070
++  RS2=280
++  RS3=1095
++  RS4=282
++  RS5=1315
++  RS6=2156
++  R2=1.715
++  Rdc=0.1
++  L=65mm
++  dL3=530n
++  dC3=46p
++  DR3=0.1
++  DR4=570
++  L100=65mm
++  dL4=8000n
++  dC4=9p
++  DR5=0.01
++  DR6=900
+C_C7  N11570  N11578  {C3}
+R_R16  N10658  N10674  {dR5}
+L_L4  N10962  N10986  {L2}
+R_R4  N10490  N10934  {Rs4}
+Kn_K6  L_L15  L_L16  1
+T_T9  N10634  0  N10642  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+L_L14  N11550  3  {L1}
+L_L9  N11578  N11518  {L5}
+C_C4  N11578  N11518  {C2}
+L_L2  N10986  4  {L1}
+R_R3  N10934  N10962  {Rs3}
+L_L11  N11518  N11526  {L4}
+Kn_K2  L_L8  L_L11  1
+T_T8  N10642  0  N10658  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+R_R22  2  N11570  {Rdc}
+C_C5  N11518  N11886  {C1}
+R_R11  N11518  N11526  {Rs4}
+R_R17  N10674  N10506  {dR4}
+R_R21  1  N10634  {Rdc}
+R_R2  N10962  N10986  {Rs2}
+R_R24  N11570  N11578  {Rs6}
+Kn_K3  L_L6  L_L12  1
+T_T7  N10658  0  N10674  0  LEN={L100}  R={dR5}  L={dL4}  G=0  C={dC4}
+R_R12  N11526  N11538  {Rs3}
+R_R1  N10986  4  {Rs1}
+Kn_K4  L_L4  L_L13  1
+C_C1  N10490  N10498  {C1}
+R_R13  N11538  N11550  {Rs2}
+L_L6  N10934  N10962  {L3}
+R_R20  N10634  N10642  {dR4}
+R_R23  N10506  N10514  {Rs6}
+L_L12  N11526  N11538  {L3}
+L_L15  N10506  N10514  {L6}
+Kn_K5  L_L2  L_L14  1
+R_R5  N11578  N11518  {Rs5}
+T_T2  N10674  0  N10506  0  LEN={L}  R={dR3}  L={dL3}  G=0  C={dC3}
+C_C6  N10506  N10514  {C3}
+R_R14  N11550  3  {Rs1}
+R_R19  N10642  N10658  {dR5}
+L_L8  N10490  N10934  {L4}
+L_L10  N10514  N10490  {L5}
+R_R10  N10514  N10490  {Rs5}
+L_L13  N11538  N11550  {L2}
+Kn_K1  L_L9  L_L10  1
+C_C3  N10514  N10490  {C2}
+L_L16  N11570  N11578  {L6}
+R_R25  N10498  4  {R2}
+R_R26  N11886  3  {R2}
+.ends SL_1310_744207_35u

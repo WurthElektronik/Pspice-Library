@@ -1,0 +1,123 @@
+**************************************************
+* Manufacturer:          Wurth Elektronik 
+* Kinds:                 EMI Multilayer Power Suppression Bead
+* Matchcode:             WE-MPSA
+* Library Type:          Pspice
+* Version:               rev21a
+* Created/modified by:   Ella
+* Date and Time:         7/25/2023
+* Team:                  eiSos EDA Service  
+* Contact:               libraries@we-online.com
+**************************************************
+.subckt MPSA_0805_78279220321_320ohm 1 2
+Rp 1 2 355
+Cp 1 2 1.5p
+Rs 1 N3 0.05
+L1 N3 2 0.96u
+.ends MPSA_0805_78279220321_320ohm
+*******
+.subckt MPSA_0805_78279220601_600ohm 1 2
+Rp 1 2 545
+Cp 1 2 1.3p
+Rs 1 N3 0.08
+L1 N3 2 1.8u
+.ends MPSA_0805_78279220601_600ohm
+*******
+.subckt MPSA_0805_78279220800_80ohm 1 2
+Rp 1 2 82
+Cp 1 2 0.325366p
+Rs 1 N3 0.018
+L1 N3 2 0.270513u
+.ends MPSA_0805_78279220800_80ohm
+*******
+.subckt MPSA_1206_78279221281_280ohm 1 2
+Rp 1 2 290
+Cp 1 2 2p
+Rs 1 N3 0.035
+L1 N3 2 0.82u
+.ends MPSA_1206_78279221281_280ohm
+*******
+.subckt MPSA_1206_78279221601_600ohm 1 2
+Rp 1 2 580
+Cp 1 2 2.4p
+Rs 1 N3 0.05
+L1 N3 2 1.5u
+.ends MPSA_1206_78279221601_600ohm
+*******
+.subckt MPSA_1612_78279223560_56ohm 1 2
+Rp 1 2 74.35
+Cp 1 2 0.08221p
+Rs 1 N3 0.004
+L1 N3 2 0.17317u
+.ends MPSA_1612_78279223560_56ohm
+*******
+.subckt MPSA_1812_78279226101_100ohm 1 2
+Rp 1 2 152
+Cp 1 2 0.078p
+Rs 1 N3 0.006
+L1 N3 2 0.2888u
+.ends MPSA_1812_78279226101_100ohm
+*******
+.subckt MPSA_2220_78279224101_100ohm 1 2
+Rp 1 2 195.6
+Cp 1 2 0.170058p
+Rs 1 N3 0.005
+L1 N3 2 0.22059u
+.ends MPSA_2220_78279224101_100ohm
+*******
+.subckt MPSA_2220_78279224151_150ohm 1 2
+Rp 1 2 277.6
+Cp 1 2 0.150624p
+Rs 1 N3 0.01
+L1 N3 2 0.425278u
+.ends MPSA_2220_78279224151_150ohm
+*******
+.subckt MPSA_2220_78279224171_170ohm 1 2
+Rp 1 2 236.2
+Cp 1 2 0.11p
+Rs 1 N3 0.015
+L1 N3 2 0.5425u
+.ends MPSA_2220_78279224171_170ohm
+*******
+.subckt MPSA_2220_78279224181_180ohm 1 2
+Rp 1 2 301
+Cp 1 2 0.1132417p
+Rs 1 N3 0.01
+L1 N3 2 0.572913u
+.ends MPSA_2220_78279224181_180ohm
+*******
+.subckt MPSA_2220_78279224251_250ohm 1 2
+Rp 1 2 360.3
+Cp 1 2 0.6067p
+Rs 1 N3 0.012
+L1 N3 2 0.9514u
+.ends MPSA_2220_78279224251_250ohm
+*******
+.subckt MPSA_2220_78279224271_270ohm 1 2
+Rp 1 2 435
+Cp 1 2 0.281966p
+Rs 1 N3 0.02
+L1 N3 2 0.815864u
+.ends MPSA_2220_78279224271_270ohm
+*******
+.subckt MPSA_2220_78279224401_400ohm 1 2
+Rp 1 2 641.7
+Cp 1 2 0.4706p
+Rs 1 N3 0.02
+L1 N3 2 1.595u
+.ends MPSA_2220_78279224401_400ohm
+*******
+.subckt MPSA_2220_78279224551_550ohm 1 2
+Rp 1 2 152.6
+Cp 1 2 0.78p
+Rs 1 N3 0.035
+L1 N3 2 0.3469u
+.ends MPSA_2220_78279224551_550ohm
+*******
+.subckt MPSA_3312_78279225101_100ohm 1 2
+Rp 1 2 145.3
+Cp 1 2 0.130298p
+Rs 1 N3 0.004
+L1 N3 2 0.159935u
+.ends MPSA_3312_78279225101_100ohm
+*******

@@ -1,0 +1,174 @@
+**************************************************
+* Manufacturer:          Wurth Elektronik 
+* Kinds:                 Performance SMD High Current Inductor
+* Matchcode:             WE-CHSA P
+* Library Type:          Pspice
+* Version:               rev22b
+* Created/modified by:   Ella
+* Date and Time:         6/8/2022
+* Team:                  eiSos EDA Service  
+* Contact:               libraries@we-online.com
+**************************************************
+* Copyright(C) 2022 Würth Elektronik eiSos GmbH & Co. KG
+* All Rights Reserved.
+**************************************************
+* Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
+* of the simulation models provided, Würth Elektronik eiSos does not guarantee the exemption of error on
+* the simulation models, nor does Würth Elektronik eiSos guarantee that the simulation model is current.
+* Würth Elektronik eiSos reserves the right to make any adjustments at any time without notice.
+* Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.
+**************************************************
+.subckt CHSA_P_1011_78433390150_1u5 1 2
+Rp 1 2 1602
+Cp 1 2 2.823p
+Rs 1 N3 0.0039
+L1 N3 2 1.388u
+.ends CHSA_P_1011_78433390150_1u5
+*******
+.subckt CHSA_P_1011_78433390240_2u4 1 2
+Rp 1 2 2607
+Cp 1 2 3.048p
+Rs 1 N3 0.0054
+L1 N3 2 2.278u
+.ends CHSA_P_1011_78433390240_2u4
+*******
+.subckt CHSA_P_1011_78433390300_3u 1 2
+Rp 1 2 3270
+Cp 1 2 2.916p
+Rs 1 N3 0.00725
+L1 N3 2 2.834u
+.ends CHSA_P_1011_78433390300_3u
+*******
+.subckt CHSA_P_1011_78433390430_4u3 1 2
+Rp 1 2 4417
+Cp 1 2 3.108p
+Rs 1 N3 0.01085
+L1 N3 2 4.233u
+.ends CHSA_P_1011_78433390430_4u3
+*******
+.subckt CHSA_P_1011_78433390620_6u2 1 2
+Rp 1 2 6737
+Cp 1 2 2.606p
+Rs 1 N3 0.0159
+L1 N3 2 5.995u
+.ends CHSA_P_1011_78433390620_6u2
+*******
+.subckt CHSA_P_1011_78433390820_8u2 1 2
+Rp 1 2 8222
+Cp 1 2 3.205p
+Rs 1 N3 0.0215
+L1 N3 2 7.712u
+.ends CHSA_P_1011_78433390820_8u2
+*******
+.subckt CHSA_P_1011_78433391000_10u 1 2
+Rp 1 2 10415
+Cp 1 2 2.911p
+Rs 1 N3 0.0277
+L1 N3 2 9.504u
+.ends CHSA_P_1011_78433391000_10u
+*******
+.subckt CHSA_P_1011_78433391500_15u 1 2
+Rp 1 2 16030
+Cp 1 2 3.179p
+Rs 1 N3 0.0508
+L1 N3 2 15.425u
+.ends CHSA_P_1011_78433391500_15u
+*******
+.subckt CHSA_P_1212_78433290200_2u 1 2
+Rp 1 2 1836
+Cp 1 2 3.178p
+Rs 1 N3 0.0039
+L1 N3 2 1.942u
+.ends CHSA_P_1212_78433290200_2u
+*******
+.subckt CHSA_P_1212_78433290240_2u4 1 2
+Rp 1 2 2324
+Cp 1 2 2.915p
+Rs 1 N3 0.0053
+L1 N3 2 2.382u
+.ends CHSA_P_1212_78433290240_2u4
+*******
+.subckt CHSA_P_1212_78433290360_3u6 1 2
+Rp 1 2 3432
+Cp 1 2 3.034p
+Rs 1 N3 0.00685
+L1 N3 2 3.529u
+.ends CHSA_P_1212_78433290360_3u6
+*******
+.subckt CHSA_P_1212_78433290510_5u1 1 2
+Rp 1 2 4856
+Cp 1 2 2.876p
+Rs 1 N3 0.0099
+L1 N3 2 5.432u
+.ends CHSA_P_1212_78433290510_5u1
+*******
+.subckt CHSA_P_1212_78433290620_6u2 1 2
+Rp 1 2 5621
+Cp 1 2 3.089p
+Rs 1 N3 0.01245
+L1 N3 2 6.103u
+.ends CHSA_P_1212_78433290620_6u2
+*******
+.subckt CHSA_P_1212_78433290750_7u5 1 2
+Rp 1 2 6972
+Cp 1 2 2.975p
+Rs 1 N3 0.01695
+L1 N3 2 7.261u
+.ends CHSA_P_1212_78433290750_7u5
+*******
+.subckt CHSA_P_1212_78433290820_8u2 1 2
+Rp 1 2 7621
+Cp 1 2 3.027p
+Rs 1 N3 0.0179
+L1 N3 2 8.163u
+.ends CHSA_P_1212_78433290820_8u2
+*******
+.subckt CHSA_P_1212_78433291500_15u 1 2
+Rp 1 2 15563
+Cp 1 2 2.89p
+Rs 1 N3 0.0359
+L1 N3 2 16.066u
+.ends CHSA_P_1212_78433291500_15u
+*******
+.subckt CHSA_P_8090_78433490036_0u36 1 2
+Rp 1 2 751.778
+Cp 1 2 1.494p
+Rs 1 N3 0.0023
+L1 N3 2 0.355435u
+.ends CHSA_P_8090_78433490036_0u36
+*******
+.subckt CHSA_P_8090_78433490056_0u56 1 2
+Rp 1 2 1078
+Cp 1 2 1.449p
+Rs 1 N3 0.00345
+L1 N3 2 0.514054u
+.ends CHSA_P_8090_78433490056_0u56
+*******
+.subckt CHSA_P_8090_78433490075_0u75 1 2
+Rp 1 2 1457
+Cp 1 2 1.476p
+Rs 1 N3 0.0049
+L1 N3 2 0.725695u
+.ends CHSA_P_8090_78433490075_0u75
+*******
+.subckt CHSA_P_8090_78433490160_1u6 1 2
+Rp 1 2 3108
+Cp 1 2 1.848p
+Rs 1 N3 0.01
+L1 N3 2 1.586u
+.ends CHSA_P_8090_78433490160_1u6
+*******
+.subckt CHSA_P_8090_78433490240_2u4 1 2
+Rp 1 2 4484
+Cp 1 2 1.701p
+Rs 1 N3 0.01535
+L1 N3 2 2.325u
+.ends CHSA_P_8090_78433490240_2u4
+*******
+.subckt CHSA_P_8090_78433490390_3u9 1 2
+Rp 1 2 6650
+Cp 1 2 1.603p
+Rs 1 N3 0.0241
+L1 N3 2 3.726u
+.ends CHSA_P_8090_78433490390_3u9
+*******

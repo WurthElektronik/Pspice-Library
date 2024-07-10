@@ -1,0 +1,2870 @@
+**************************************************
+* Manufacturer:           Würth Elektronik
+* Kinds:                  Power over Ethernet Transformer
+* Matchcode:              WE-PoE
+* Library Type:           Pspice
+* Version:                rev24b
+* Created/modified by:    Roberta      
+* Date and Time:          2024-03-15
+* Team:                   eiSos EDA Service  
+* Contact:                libraries@we-online.com
+**************************************************	
+* Copyright(C) 2024 Würth Elektronik eiSos GmbH & Co. KG	
+* All Rights Reserved.	
+**************************************************	
+* Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy	
+* of the simulation models provided, Würth Elektronik eiSos does not guarantee the exemption of error on	
+* the simulation models, nor does Würth Elektronik eiSos guarantee that the simulation model is current.	
+* Würth Elektronik eiSos reserves the right to make any adjustments at any time without notice.	
+* Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.	
+**************************************************
+**********************************
+************ WE-PoE **************
+.subckt	PoE_EFD20_750315422		2  3  1  4  5  6  11  7	
+.param RxLkg=154.84ohm				
+.param Leakage=0.16uh				
+Rlkg	2	2a	{RxLkg*2}	
+L_Lkg	2	2a	{Leakage*2}	
+Rlkg2	1	1a	{RxLkg*2}	
+L_Lkg2	1	1a	{Leakage*2}	
+Lpri1	2a	2b	8.84uH	
+Rser1	2b	3	23mohm	
+Lpri2	1a	1b	8.84uH	
+Rser2	1b	4	27mohm	
+Laux1	5	5a	9uH	
+Rser3	5a	6	385mohm	
+Lsec1	11	11a	11.391uH	
+Rser5	11a	7	14mohm	
+K Lpri1 Lpri2 Laux1  Lsec1        1				
+.param Cprm1=148.3pf				
+.param Cprm2=148.3pf				
+.param Rdmp1=8709.74ohm				
+.param Rdmp2=8709.74ohm				
+Cpri1	2	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Cpri2	1	4a	{Cprm2}	
+Rser14	4a	4	10mohm	
+Rdmp1	2	3	{Rdmp1}	
+Rdmp2	1	4	{Rdmp2}	
+Rg3	2	0	20meg	
+Rg4	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg8	4	0	20meg	
+Rg9	6	0	20meg	
+Rg11	11	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EP7_750313109		4  3  2  1  5  7  6  8	
+.param RxLkg=3015.11ohm				
+.param Leakage=0.8uh				
+Rlkg	4	4a	{RxLkg}	
+L_Lkg	4	4a	{Leakage}	
+Lpri1	4a	4b	43.2uH	
+Rser1	4b	3	305mohm	
+Laux1	2	2a	17.188uH	
+Rser3	2a	1	438mohm	
+Lsec1	5	5a	2.75uH	
+Rser5	5a	7	40mohm	
+Lsec2	6	6a	2.75uH	
+Rser6	6a	8	40mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=4pf				
+.param Rdmp1=165831.31ohm				
+Cpri1	4	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	4	3	{Rdmp1}	
+Rg3	4	0	20meg	
+Rg5	2	0	20meg	
+Rg7	3	0	20meg	
+Rg9	1	0	20meg	
+Rg11	5	0	20meg	
+Rg12	6	0	20meg	
+Rg19	7	0	20meg	
+Rg20	8	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750344488		3  1  5  4  9  6	
+.param RxLkg=255.83ohm				
+.param Leakage=0.158uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	13.842uH	
+Rser1	3b	1	18mohm	
+Laux1	5	5a	7.875uH	
+Rser3	5a	4	126mohm	
+Lsec1	9	9a	7.875uH	
+Rser5	9a	6	13mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=68.11pf				
+.param Rdmp1=22668.83ohm				
+Cpri1	3	1a	{Cprm1}	
+Rser13	1a	1	10mohm	
+Rdmp1	3	1	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	5	0	20meg	
+Rg7	1	0	20meg	
+Rg9	4	0	20meg	
+Rg11	9	0	20meg	
+Rg19	6	0	20meg	
+.ends
+				
+.subckt	PoE_RM6_750317123		2  1  3  4  6  7	
+.param RxLkg=417.39ohm				
+.param Leakage=0.6uh				
+Rlkg	2	2a	{RxLkg}	
+L_Lkg	2	2a	{Leakage}	
+Lpri1	2a	2b	81.4uH	
+Rser1	2b	1	88mohm	
+Laux1	3	3a	7.38uH	
+Rser3	3a	4	56mohm	
+Lsec1	6	6a	13.12uH	
+Rser5	6a	7	16mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=63pf				
+.param Rdmp1=57043.75ohm				
+Cpri1	2	1a	{Cprm1}	
+Rser13	1a	1	10mohm	
+Rdmp1	2	1	{Rdmp1}	
+Rg3	2	0	20meg	
+Rg5	3	0	20meg	
+Rg7	1	0	20meg	
+Rg9	4	0	20meg	
+Rg11	6	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EP7_750310019		3  4  2  1  6  8  5  7	
+.param RxLkg=4526.61ohm				
+.param Leakage=4.5uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	305.5uH	
+Rser1	3b	4	1600mohm	
+Laux1	2	2a	576.446uH	
+Rser3	2a	1	2600mohm	
+Lsec1	6	6a	40.992uH	
+Rser5	6a	8	77.8mohm	
+Lsec2	5	5a	40.992uH	
+Rser6	5a	7	78.6mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=7.97pf				
+.param Rdmp1=311832.98ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	6	0	20meg	
+Rg12	5	0	20meg	
+Rg19	8	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EP7_750310018		3  4  2  1  5  7	
+.param RxLkg=4601.31ohm				
+.param Leakage=6.75uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	493.25uH	
+Rser1	3b	4	1570mohm	
+Laux1	2	2a	21.701uH	
+Rser3	2a	1	190mohm	
+Lsec1	5	5a	3.472uH	
+Rser5	5a	7	10mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=10.76pf				
+.param Rdmp1=340837.67ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	5	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EP7_750310022		3  4  2  1  5  7	
+.param RxLkg=3999.97ohm				
+.param Leakage=7.5uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	513.5uH	
+Rser1	3b	4	1600mohm	
+Laux1	2	2a	21.699uH	
+Rser3	2a	1	200mohm	
+Lsec1	5	5a	42.531uH	
+Rser5	5a	7	90mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=16.87pf				
+.param Rdmp1=277864.58ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	5	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EP7_750310020		3  4  2  1  5  7	
+.param RxLkg=2940.26ohm				
+.param Leakage=5.42uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	494.58uH	
+Rser1	3b	4	1620mohm	
+Laux1	2	2a	21.701uH	
+Rser3	2a	1	180mohm	
+Lsec1	5	5a	7.813uH	
+Rser5	5a	7	20mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=16.99pf				
+.param Rdmp1=271241.97ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	5	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750314782		5  4  3  2  1  6  10  7  9	
+.param RxLkg=470.46ohm				
+.param Leakage=0.3uh				
+Rlkg	5	5a	{RxLkg/2}	
+L_Lkg	5	5a	{Leakage/2}	
+Rlkg2	4	4a	{RxLkg/2}	
+L_Lkg2	4	4a	{Leakage/2}	
+Lpri1	5a	5b	9.1uH	
+Rser1	5b	4	39.5mohm	
+Lpri2	4a	4b	9.1uH	
+Rser2	4b	3	39.5mohm	
+Laux1	2	2a	11.42uH	
+Rser3	2a	1	116mohm	
+Lsec1	6	6a	37uH	
+Rser5	6a	10	90mohm	
+Lsec2	7	7a	37uH	
+Rser6	7a	9	180mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2       1				
+.param Cprm1=54.95pf				
+.param Cprm2=56.25pf				
+.param Rdmp1=14505.8ohm				
+.param Rdmp2=14505.8ohm				
+Cpri1	5	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Cpri2	4	3a	{Cprm2}	
+Rser14	3a	3	10mohm	
+Rdmp1	5	4	{Rdmp1}	
+Rdmp2	4	3	{Rdmp2}	
+Rg3	5	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg8	3	0	20meg	
+Rg9	1	0	20meg	
+Rg11	6	0	20meg	
+Rg12	7	0	20meg	
+Rg19	10	0	20meg	
+Rg20	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750313082		5  4  3  2  1  6  9  7  10	
+.param RxLkg=1453.1ohm				
+.param Leakage=0.375uh				
+Rlkg	5	5a	{RxLkg/2}	
+L_Lkg	5	5a	{Leakage/2}	
+Rlkg2	4	4a	{RxLkg/2}	
+L_Lkg2	4	4a	{Leakage/2}	
+Lpri1	5a	5b	9.063uH	
+Rser1	5b	4	41mohm	
+Lpri2	4a	4b	9.063uH	
+Rser2	4b	3	28mohm	
+Laux1	2	2a	11.42uH	
+Rser3	2a	1	123mohm	
+Lsec1	6	6a	1.827uH	
+Rser5	6a	9	8.4mohm	
+Lsec2	7	7a	1.827uH	
+Rser6	7a	10	8.4mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2       1				
+.param Cprm1=9pf				
+.param Cprm2=9pf				
+.param Rdmp1=35843.03ohm				
+.param Rdmp2=35843.03ohm				
+Cpri1	5	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Cpri2	4	3a	{Cprm2}	
+Rser14	3a	3	10mohm	
+Rdmp1	5	4	{Rdmp1}	
+Rdmp2	4	3	{Rdmp2}	
+Rg3	5	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg8	3	0	20meg	
+Rg9	1	0	20meg	
+Rg11	6	0	20meg	
+Rg12	7	0	20meg	
+Rg19	9	0	20meg	
+Rg20	10	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750314433		2  5  1  3  4  10  7  6	
+.param RxLkg=1748.02ohm				
+.param Leakage=1.1uh				
+Rlkg	2	2a	{RxLkg/2}	
+L_Lkg	2	2a	{Leakage/2}	
+Rlkg2	5	5a	{RxLkg/2}	
+L_Lkg2	5	5a	{Leakage/2}	
+Lpri1	2a	2b	44.45uH	
+Rser1	2b	5	154mohm	
+Lpri2	5a	5b	44.45uH	
+Rser2	5b	1	125mohm	
+Laux1	3	3a	23.472uH	
+Rser3	3a	4	230mohm	
+Lsec1	10	10a	5uH	
+Rser5	10a	7	10mohm	
+Lsec2	7	7a	5uH	
+Rser6	7a	6	148mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2       1				
+.param Cprm1=11pf				
+.param Cprm2=11pf				
+.param Rdmp1=71509.75ohm				
+.param Rdmp2=71509.75ohm				
+Cpri1	2	5a	{Cprm1}	
+Rser13	5a	5	10mohm	
+Cpri2	5	1a	{Cprm2}	
+Rser14	1a	1	10mohm	
+Rdmp1	2	5	{Rdmp1}	
+Rdmp2	5	1	{Rdmp2}	
+Rg3	2	0	20meg	
+Rg5	3	0	20meg	
+Rg7	5	0	20meg	
+Rg8	1	0	20meg	
+Rg9	4	0	20meg	
+Rg11	10	0	20meg	
+Rg19	7	0	20meg	
+Rg20	6	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750310035		3  4  2  1  7  9	
+.param RxLkg=867.01ohm				
+.param Leakage=0.8uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	76.6uH	
+Rser1	3b	4	87mohm	
+Laux1	2	2a	35.981uH	
+Rser3	2a	1	225mohm	
+Lsec1	7	7a	5.757uH	
+Rser5	7a	9	6mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=27.5pf				
+.param Rdmp1=83883.14ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	7	0	20meg	
+Rg19	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750032173		3  4  2  1  7  9	
+.param RxLkg=6527.47ohm				
+.param Leakage=6.75uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	120.25uH	
+Rser1	3b	4	480mohm	
+Laux1	2	2a	5.512uH	
+Rser3	2a	1	94mohm	
+Lsec1	7	7a	10.804uH	
+Rser5	7a	9	55mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=21.05pf				
+.param Rdmp1=122813.13ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	7	0	20meg	
+Rg19	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750310377		8  7  9  10  4  1	
+.param RxLkg=469.69ohm				
+.param Leakage=0.65uh				
+Rlkg	8	8a	{RxLkg}	
+L_Lkg	8	8a	{Leakage}	
+Lpri1	8a	8b	126.35uH	
+Rser1	8b	7	180mohm	
+Laux1	9	9a	31.75uH	
+Rser3	9a	10	220mohm	
+Lsec1	4	4a	31.75uH	
+Rser5	4a	1	47.5mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=37.7pf				
+.param Rdmp1=91769.91ohm				
+Cpri1	8	7a	{Cprm1}	
+Rser13	7a	7	10mohm	
+Rdmp1	8	7	{Rdmp1}	
+Rg3	8	0	20meg	
+Rg5	9	0	20meg	
+Rg7	7	0	20meg	
+Rg9	10	0	20meg	
+Rg11	4	0	20meg	
+Rg19	1	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750310007		3  4  2  1  6  7  9  10	
+.param RxLkg=945.19ohm				
+.param Leakage=0.781uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	126.219uH	
+Rser1	3b	4	180mohm	
+Laux1	2	2a	40.781uH	
+Rser3	2a	1	250mohm	
+Lsec1	6	6a	3.528uH	
+Rser5	6a	7	13mohm	
+Lsec2	9	9a	40.781uH	
+Rser6	9a	10	105mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=13.44pf				
+.param Rdmp1=153699.14ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	6	0	20meg	
+Rg12	9	0	20meg	
+Rg19	7	0	20meg	
+Rg20	10	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750032395		3  1  4  5  10  9  8  6	
+.param RxLkg=5138.3ohm				
+.param Leakage=3.5uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	33.5uH	
+Rser1	3b	1	62mohm	
+Laux1	4	4a	10.152uH	
+Rser3	4a	5	425mohm	
+Lsec1	10	10a	0.336uH	
+Rser5	10a	9	19mohm	
+Lsec2	8	8a	1.342uH	
+Rser6	8a	6	6mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=31.35pf				
+.param Rdmp1=54319.15ohm				
+Cpri1	3	1a	{Cprm1}	
+Rser13	1a	1	10mohm	
+Rdmp1	3	1	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	4	0	20meg	
+Rg7	1	0	20meg	
+Rg9	5	0	20meg	
+Rg11	10	0	20meg	
+Rg12	8	0	20meg	
+Rg19	9	0	20meg	
+Rg20	6	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750310310		3  1  4  5  10  9  8  6	
+.param RxLkg=7618.9ohm				
+.param Leakage=5uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	32uH	
+Rser1	3b	1	62mohm	
+Laux1	4	4a	10.152uH	
+Rser3	4a	5	425mohm	
+Lsec1	10	10a	1.342uH	
+Rser5	10a	9	6mohm	
+Lsec2	8	8a	1.342uH	
+Rser6	8a	6	55mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=29.1pf				
+.param Rdmp1=56379.83ohm				
+Cpri1	3	1a	{Cprm1}	
+Rser13	1a	1	10mohm	
+Rdmp1	3	1	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	4	0	20meg	
+Rg7	1	0	20meg	
+Rg9	5	0	20meg	
+Rg11	10	0	20meg	
+Rg12	8	0	20meg	
+Rg19	9	0	20meg	
+Rg20	6	0	20meg	
+.ends
+				
+.subckt	PoE_EP10_750310027		3  4  2  1  5  7	
+.param RxLkg=4681.68ohm				
+.param Leakage=1.35uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	19.05uH	
+Rser1	3b	4	72mohm	
+Laux1	2	2a	6.296uH	
+Rser3	2a	1	135mohm	
+Lsec1	5	5a	1.007uH	
+Rser5	5a	7	6.75mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=10.19pf				
+.param Rdmp1=70745.36ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	5	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EP10_750310032		3  4  2  1  5  7	
+.param RxLkg=2387.26ohm				
+.param Leakage=4.5uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	150.5uH	
+Rser1	3b	4	390mohm	
+Laux1	2	2a	73.262uH	
+Rser3	2a	1	730mohm	
+Lsec1	5	5a	73.262uH	
+Rser5	5a	7	210mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=57.31pf				
+.param Rdmp1=82227.79ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	5	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EP10_750310031		3  4  2  1  5  7	
+.param RxLkg=5138.95ohm				
+.param Leakage=7.5uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	256.5uH	
+Rser1	3b	4	702mohm	
+Laux1	2	2a	10.995uH	
+Rser3	2a	1	50mohm	
+Lsec1	5	5a	21.551uH	
+Rser5	5a	7	40mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=20.17pf				
+.param Rdmp1=180891.2ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	5	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750310002		4  2  1  6  5  7  10	
+.param RxLkg=655.38ohm				
+.param Leakage=0.2uh				
+Rlkg	4	4a	{RxLkg/2}	
+L_Lkg	4	4a	{Leakage/2}	
+Rlkg2	2	2a	{RxLkg/2}	
+L_Lkg2	2	2a	{Leakage/2}	
+Lpri1	4a	4b	6.9uH	
+Rser1	4b	2	13.5mohm	
+Lpri2	2a	2b	6.9uH	
+Rser2	2b	1	13.5mohm	
+Laux1	6	6a	17.286uH	
+Rser3	6a	5	105mohm	
+Lsec1	7	7a	2.286uH	
+Rser5	7a	10	8mohm	
+K Lpri1 Lpri2 Laux1  Lsec1        1				
+.param Cprm1=16.63pf				
+.param Cprm2=16.4pf				
+.param Rdmp1=22938.13ohm				
+.param Rdmp2=22938.13ohm				
+Cpri1	4	2a	{Cprm1}	
+Rser13	2a	2	10mohm	
+Cpri2	2	1a	{Cprm2}	
+Rser14	1a	1	10mohm	
+Rdmp1	4	2	{Rdmp1}	
+Rdmp2	2	1	{Rdmp2}	
+Rg3	4	0	20meg	
+Rg5	6	0	20meg	
+Rg7	2	0	20meg	
+Rg8	1	0	20meg	
+Rg9	5	0	20meg	
+Rg11	7	0	20meg	
+Rg19	10	0	20meg	
+.ends
+				
+.subckt	PoE_ER11_749119133		1  3  5  6  12  7  11  8  10  9	
+.param RxLkg=2357.02ohm				
+.param Leakage=2uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	398uH	
+Rser1	1b	3	800mohm	
+Laux1	5	5a	25uH	
+Rser3	5a	6	600mohm	
+Lsec1	12	12a	2.778uH	
+Rser5	12a	7	20mohm	
+Lsec2	11	11a	2.778uH	
+Rser6	11a	8	20mohm	
+Lsec3	10	10a	2.778uH	
+Rser7	10a	9	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=4.5pf				
+.param Rdmp1=471404.77ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg12	11	0	20meg	
+Rg13	10	0	20meg	
+Rg19	7	0	20meg	
+Rg20	8	0	20meg	
+Rg21	9	0	20meg	
+.ends
+				
+.subckt	PoE_ER11_749119150		1  3  5  6  12  7  11  8  10  9	
+.param RxLkg=2132.01ohm				
+.param Leakage=2uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	398uH	
+Rser1	1b	3	800mohm	
+Laux1	5	5a	25uH	
+Rser3	5a	6	500mohm	
+Lsec1	12	12a	7.716uH	
+Rser5	12a	7	60mohm	
+Lsec2	11	11a	7.716uH	
+Rser6	11a	8	60mohm	
+Lsec3	10	10a	7.716uH	
+Rser7	10a	9	60mohm	
+K Lpri1  Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=5.5pf				
+.param Rdmp1=426402.09ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg12	11	0	20meg	
+Rg13	10	0	20meg	
+Rg19	7	0	20meg	
+Rg20	8	0	20meg	
+Rg21	9	0	20meg	
+.ends
+				
+.subckt	PoE_ER14_749119218		1  3  5  6  12  7  11  8  10  9	
+.param RxLkg=5147.91ohm				
+.param Leakage=3.2uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	206.8uH	
+Rser1	1b	3	400mohm	
+Laux1	5	5a	23.333uH	
+Rser3	5a	6	800mohm	
+Lsec1	12	12a	0.771uH	
+Rser5	12a	7	7mohm	
+Lsec2	11	11a	0.771uH	
+Rser6	11a	8	7mohm	
+Lsec3	10	10a	0.771uH	
+Rser7	10a	9	7mohm	
+K Lpri1  Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=4.6pf				
+.param Rdmp1=337831.54ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg12	11	0	20meg	
+Rg13	10	0	20meg	
+Rg19	7	0	20meg	
+Rg20	8	0	20meg	
+Rg21	9	0	20meg	
+.ends
+				
+.subckt	PoE_ER14_749119233		1  3  5  6  12  7  10  8	
+.param RxLkg=3585.68ohm				
+.param Leakage=1.8uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	208.2uH	
+Rser1	1b	3	200mohm	
+Laux1	5	5a	13.125uH	
+Rser3	5a	6	100mohm	
+Lsec1	12	12a	1.458uH	
+Rser5	12a	7	5mohm	
+Lsec2	10	10a	1.458uH	
+Rser6	10a	8	5mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=3pf				
+.param Rdmp1=418329.7ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg12	10	0	20meg	
+Rg19	7	0	20meg	
+Rg20	8	0	20meg	
+.ends
+				
+.subckt	PoE_ER14_749119250		1  3  5  6  12  7  11  8  10  9	
+.param RxLkg=3161.68ohm				
+.param Leakage=2.3uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	207.7uH	
+Rser1	1b	3	200mohm	
+Laux1	5	5a	17.865uH	
+Rser3	5a	6	100mohm	
+Lsec1	12	12a	5.833uH	
+Rser5	12a	7	30mohm	
+Lsec2	11	11a	5.833uH	
+Rser6	11a	8	30mohm	
+Lsec3	10	10a	5.833uH	
+Rser7	10a	9	30mohm	
+K Lpri1  Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=6.3pf				
+.param Rdmp1=288674.73ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg12	11	0	20meg	
+Rg13	10	0	20meg	
+Rg19	7	0	20meg	
+Rg20	8	0	20meg	
+Rg21	9	0	20meg	
+.ends
+				
+.subckt	PoE_EFD15_749119318		1  3  5  6  12  7  11  8  10  9	
+.param RxLkg=2016.4ohm				
+.param Leakage=1.1uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	118.9uH	
+Rser1	1b	3	100mohm	
+Laux1	5	5a	18.52uH	
+Rser3	5a	6	200mohm	
+Lsec1	12	12a	0.612uH	
+Rser5	12a	7	6mohm	
+Lsec2	11	11a	0.612uH	
+Rser6	11a	8	6mohm	
+Lsec3	10	10a	0.612uH	
+Rser7	10a	9	6mohm	
+K Lpri1  Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=6.2pf				
+.param Rdmp1=219970.55ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg12	11	0	20meg	
+Rg13	10	0	20meg	
+Rg19	7	0	20meg	
+Rg20	8	0	20meg	
+Rg21	9	0	20meg	
+.ends
+				
+.subckt	PoE_EFD15_749119333		1  3  5  6  12  7  11  8  10  9	
+.param RxLkg=3194.49ohm				
+.param Leakage=1.7uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	118.3uH	
+Rser1	1b	3	200mohm	
+Laux1	5	5a	7.5uH	
+Rser3	5a	6	100mohm	
+Lsec1	12	12a	0.833uH	
+Rser5	12a	7	10mohm	
+Lsec2	11	11a	0.833uH	
+Rser6	11a	8	10mohm	
+Lsec3	10	10a	0.833uH	
+Rser7	10a	9	10mohm	
+K Lpri1  Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=5.9pf				
+.param Rdmp1=225493.47ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg12	11	0	20meg	
+Rg13	10	0	20meg	
+Rg19	7	0	20meg	
+Rg20	8	0	20meg	
+Rg21	9	0	20meg	
+.ends
+				
+.subckt	PoE_EFD15_749119350		1  3  5  6  12  7  11  8  10  9	
+.param RxLkg=2672.61ohm				
+.param Leakage=1.2uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	118.8uH	
+Rser1	1b	3	200mohm	
+Laux1	5	5a	7.5uH	
+Rser3	5a	6	100mohm	
+Lsec1	12	12a	2.315uH	
+Rser5	12a	7	20mohm	
+Lsec2	11	11a	2.315uH	
+Rser6	11a	8	20mohm	
+Lsec3	10	10a	2.315uH	
+Rser7	10a	9	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=4.2pf				
+.param Rdmp1=267261.07ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg12	11	0	20meg	
+Rg13	10	0	20meg	
+Rg19	7	0	20meg	
+Rg20	8	0	20meg	
+Rg21	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_749119933		3  4  2  1  7  10  8  9	
+.param RxLkg=692.1ohm				
+.param Leakage=0.73uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	126.27uH	
+Rser1	3b	4	200mohm	
+Laux1	2	2a	31.75uH	
+Rser3	2a	1	300mohm	
+Lsec1	7	7a	3.528uH	
+Rser5	7a	10	20mohm	
+Lsec2	8	8a	3.528uH	
+Rser6	8a	9	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=21.9pf				
+.param Rdmp1=120406.46ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	7	0	20meg	
+Rg12	8	0	20meg	
+Rg19	10	0	20meg	
+Rg20	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_749119950		3  4  2  1  7  10  8  9	
+.param RxLkg=2381.03ohm				
+.param Leakage=1.2uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	125.8uH	
+Rser1	3b	4	200mohm	
+Laux1	2	2a	127uH	
+Rser3	2a	1	470mohm	
+Lsec1	7	7a	31.75uH	
+Rser5	7a	10	30mohm	
+Lsec2	8	8a	31.75uH	
+Rser6	8a	9	30mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=5pf				
+.param Rdmp1=251992.41ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	7	0	20meg	
+Rg12	8	0	20meg	
+Rg19	10	0	20meg	
+Rg20	9	0	20meg	
+.ends
+				
+.subckt	PoE_ER14_7491192912		1  3  5  6  12  10  8  7	
+.param RxLkg=1606.04ohm				
+.param Leakage=1.3uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	208.7uH	
+Rser1	1b	3	300mohm	
+Laux1	5	5a	36.458uH	
+Rser3	5a	6	200mohm	
+Lsec1	12	12a	3.281uH	
+Rser5	12a	10	20mohm	
+Lsec2	10	10a	1.458uH	
+Rser6	10a	8	10mohm	
+Lsec3	8	8a	17.865uH	
+Rser7	8a	7	60mohm	
+K Lpri1  Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=7.8pf				
+.param Rdmp1=259436.62ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg19	10	0	20meg	
+Rg20	8	0	20meg	
+Rg21	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD15_7491193912		1  3  5  6  12  10  8  7	
+.param RxLkg=1020.62ohm				
+.param Leakage=0.5uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	119.5uH	
+Rser1	1b	3	200mohm	
+Laux1	5	5a	13.333uH	
+Rser3	5a	6	200mohm	
+Lsec1	12	12a	1.2uH	
+Rser5	12a	10	10mohm	
+Lsec2	10	10a	0.533uH	
+Rser6	10a	8	7mohm	
+Lsec3	8	8a	4.8uH	
+Rser7	8a	7	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=5pf				
+.param Rdmp1=244949.23ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg19	10	0	20meg	
+Rg20	8	0	20meg	
+Rg21	7	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_7491199112		3  4  2  1  7  10  8  9	
+.param RxLkg=355.73ohm				
+.param Leakage=0.3uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	126.7uH	
+Rser1	3b	4	200mohm	
+Laux1	2	2a	31.75uH	
+Rser3	2a	1	400mohm	
+Lsec1	7	7a	31.75uH	
+Rser5	7a	10	100mohm	
+Lsec2	8	8a	31.75uH	
+Rser6	8a	9	100mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=14pf				
+.param Rdmp1=150594.26ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	7	0	20meg	
+Rg12	8	0	20meg	
+Rg19	10	0	20meg	
+Rg20	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_7491199212		3  4  2  1  7  10  8  9	
+.param RxLkg=2312.66ohm				
+.param Leakage=1.2uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	125.8uH	
+Rser1	3b	4	400mohm	
+Laux1	2	2a	31.75uH	
+Rser3	2a	1	90mohm	
+Lsec1	7	7a	31.75uH	
+Rser5	7a	10	40mohm	
+Lsec2	8	8a	31.75uH	
+Rser6	8a	9	40mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=5.3pf				
+.param Rdmp1=244756.47ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	7	0	20meg	
+Rg12	8	0	20meg	
+Rg19	10	0	20meg	
+Rg20	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_7491199312		2  1  7  9	
+.param RxLkg=294.63ohm				
+.param Leakage=0.335uh				
+Rlkg	2	2a	{RxLkg}	
+L_Lkg	2	2a	{Leakage}	
+Lpri1	2a	2b	39.665uH	
+Rser1	2b	1	99mohm	
+Lsec1	7	7a	40uH	
+Rser5	7a	9	63mohm	
+K Lpri1    Lsec1        1				
+.param Cprm1=80.8pf				
+.param Rdmp1=35179.81ohm				
+Cpri1	2	1a	{Cprm1}	
+Rser13	1a	1	10mohm	
+Rdmp1	2	1	{Rdmp1}	
+Rg3	2	0	20meg	
+Rg7	1	0	20meg	
+Rg11	7	0	20meg	
+Rg19	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_7491199331		3  4  2  1  7  10  8  9	
+.param RxLkg=3373.13ohm				
+.param Leakage=1.7uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	125.3uH	
+Rser1	3b	4	400mohm	
+Laux1	2	2a	5.512uH	
+Rser3	2a	1	80mohm	
+Lsec1	7	7a	0.882uH	
+Rser5	7a	10	10mohm	
+Lsec2	8	8a	0.882uH	
+Rser6	8a	9	10mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=5pf				
+.param Rdmp1=251992.41ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	7	0	20meg	
+Rg12	8	0	20meg	
+Rg19	10	0	20meg	
+Rg20	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_7491199332		1  2  5  4  7  8  9  6  10	
+.param RxLkg=1318.37ohm				
+.param Leakage=0.73uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	34.27uH	
+Rser1	1b	2	49mohm	
+Laux1	5	5a	8.75uH	
+Rser3	5a	4	180mohm	
+Lsec1	7	7a	0.432uH	
+Rser5	7a	8	69mohm	
+Lsec2	8	8a	0.972uH	
+Rser6	8a	9	11mohm	
+Lsec3	6	6a	2.701uH	
+Rser7	6a	10	14mohm	
+K Lpri1  Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=21.9pf				
+.param Rdmp1=63209.38ohm				
+Cpri1	1	2a	{Cprm1}	
+Rser13	2a	2	10mohm	
+Rdmp1	1	2	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	2	0	20meg	
+Rg9	4	0	20meg	
+Rg11	7	0	20meg	
+Rg13	6	0	20meg	
+Rg19	8	0	20meg	
+Rg20	9	0	20meg	
+Rg21	10	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_7491199501		3  4  2  1  7  10  8  9	
+.param RxLkg=2381.03ohm				
+.param Leakage=1.2uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	125.8uH	
+Rser1	3b	4	400mohm	
+Laux1	2	2a	5.512uH	
+Rser3	2a	1	80mohm	
+Lsec1	7	7a	1.984uH	
+Rser5	7a	10	20mohm	
+Lsec2	8	8a	1.984uH	
+Rser6	8a	9	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=5pf				
+.param Rdmp1=251992.41ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	7	0	20meg	
+Rg12	8	0	20meg	
+Rg19	10	0	20meg	
+Rg20	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750310013		3  4  7  9	
+.param RxLkg=513.38ohm				
+.param Leakage=0.74uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	126.26uH	
+Rser1	3b	4	159mohm	
+Lsec1	7	7a	7.938uH	
+Rser5	7a	9	14mohm	
+K Lpri1    Lsec1        1				
+.param Cprm1=40.9pf				
+.param Rdmp1=88107.25ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg7	4	0	20meg	
+Rg11	7	0	20meg	
+Rg19	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP10_750310062		3  4  5  7	
+.param RxLkg=1703.43ohm				
+.param Leakage=2.5uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	124.5uH	
+Rser1	3b	4	456mohm	
+Lsec1	5	5a	7.938uH	
+Rser5	5a	7	22mohm	
+K Lpri1    Lsec1        1				
+.param Cprm1=42.4pf				
+.param Rdmp1=86534.47ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg7	4	0	20meg	
+Rg11	5	0	20meg	
+Rg19	7	0	20meg	
+.ends
+	
+.subckt	PoE_EP10_750319924		3  4  2  1  5  7	
+.param RxLkg=1021.06ohm				
+.param Leakage=2.1uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	232.9uH	
+Rser1	3b	4	480mohm	
+Laux1	2	2a	31.898uH	
+Rser3	2a	1	470mohm	
+Lsec1	5	5a	2.604uH	
+Rser5	5a	7	9mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=45pf				
+.param Rdmp1=114261.23ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	5	0	20meg	
+Rg19	7	0	20meg	
+.ends
+
+.subckt	PoE_EP10_750319935		3  4  2  1  5  7	
+.param RxLkg=825.14ohm				
+.param Leakage=1.6uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	233.4uH	
+Rser1	3b	4	445mohm	
+Laux1	2	2a	31.374uH	
+Rser3	2a	1	435mohm	
+Lsec1	5	5a	5.562uH	
+Rser5	5a	7	12mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=40pf				
+.param Rdmp1=121192.15ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	5	0	20meg	
+Rg19	7	0	20meg	
+.ends
+
+.subckt	PoE_EP10_750319936		3  4  2  1  5  7	
+.param RxLkg=542.9ohm				
+.param Leakage=1.3uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	233.7uH	
+Rser1	3b	4	465mohm	
+Laux1	2	2a	31.074uH	
+Rser3	2a	1	430mohm	
+Lsec1	5	5a	31.074uH	
+Rser5	5a	7	90mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=61pf				
+.param Rdmp1=98138.8ohm				
+Cpri1	3	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Rdmp1	3	4	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg9	1	0	20meg	
+Rg11	5	0	20meg	
+Rg19	7	0	20meg	
+.ends
+
+**********************************
+************ WE-PoE+ **************			
+.subckt	PoE_EPW15_750316333		1  3  4  5  8  6	
+.param RxLkg=2269.9ohm				
+.param Leakage=1.3uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	39.7uH	
+Rser1	1b	3	50mohm	
+Laux1	4	4a	5.766uH	
+Rser3	4a	5	89mohm	
+Lsec1	8	8a	5.766uH	
+Rser5	8a	6	13mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=20pf				
+.param Rdmp1=71589.21ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	8	0	20meg	
+Rg19	6	0	20meg	
+.ends
+				
+.subckt	PoE_EPW15_750316332		1  3  4  5  8  6	
+.param RxLkg=2886.75ohm				
+.param Leakage=1.6uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	46.4uH	
+Rser1	1b	3	65mohm	
+Laux1	4	4a	9.293uH	
+Rser3	4a	5	140mohm	
+Lsec1	8	8a	1.92uH	
+Rser5	8a	6	5mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=16pf				
+.param Rdmp1=86602.4ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	8	0	20meg	
+Rg19	6	0	20meg	
+.ends
+				
+.subckt	PoE_EPW15_750316331		1  3  4  5  8  6	
+.param RxLkg=1326.83ohm				
+.param Leakage=0.85uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	53.15uH	
+Rser1	1b	3	120mohm	
+Laux1	4	4a	11.344uH	
+Rser3	4a	5	125mohm	
+Lsec1	8	8a	0.844uH	
+Rser5	8a	6	4mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=19pf				
+.param Rdmp1=84292.69ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	8	0	20meg	
+Rg19	6	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750314783		5  4  3  2  1  6  9  7  10	
+.param RxLkg=1736.83ohm				
+.param Leakage=0.4uh				
+Rlkg	5	5a	{RxLkg/2}	
+L_Lkg	5	5a	{Leakage/2}	
+Rlkg2	4	4a	{RxLkg/2}	
+L_Lkg2	4	4a	{Leakage/2}	
+Lpri1	5a	5b	6.3uH	
+Rser1	5b	4	47mohm	
+Lpri2	4a	4b	6.3uH	
+Rser2	4b	3	47mohm	
+Laux1	2	2a	8.025uH	
+Rser3	2a	1	233mohm	
+Lsec1	6	6a	1.284uH	
+Rser5	6a	9	8mohm	
+Lsec2	7	7a	1.284uH	
+Rser6	7a	10	8mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2       1				
+.param Cprm1=10.2pf				
+.param Cprm2=10.2pf				
+.param Rdmp1=28223.54ohm				
+.param Rdmp2=28223.54ohm				
+Cpri1	5	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Cpri2	4	3a	{Cprm2}	
+Rser14	3a	3	10mohm	
+Rdmp1	5	4	{Rdmp1}	
+Rdmp2	4	3	{Rdmp2}	
+Rg3	5	0	20meg	
+Rg5	2	0	20meg	
+Rg7	4	0	20meg	
+Rg8	3	0	20meg	
+Rg9	1	0	20meg	
+Rg11	6	0	20meg	
+Rg12	7	0	20meg	
+Rg19	9	0	20meg	
+Rg20	10	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750311320		1  2  4  5  6  9	
+.param RxLkg=851.94ohm				
+.param Leakage=0.6uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	99.4uH	
+Rser1	1b	2	100mohm	
+Laux1	4	4a	31.36uH	
+Rser3	4a	5	470mohm	
+Lsec1	6	6a	31.36uH	
+Rser5	6a	9	30mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=12.4pf				
+.param Rdmp1=141990.56ohm				
+Cpri1	1	2a	{Cprm1}	
+Rser13	2a	2	10mohm	
+Rdmp1	1	2	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	2	0	20meg	
+Rg9	5	0	20meg	
+Rg11	6	0	20meg	
+Rg19	9	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750316116		1  3  5  6  11  7	
+.param RxLkg=608.58ohm				
+.param Leakage=0.2uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	17.8uH	
+Rser1	1b	3	20mohm	
+Laux1	5	5a	4.5uH	
+Rser3	5a	6	66mohm	
+Lsec1	11	11a	4.5uH	
+Rser5	11a	7	11mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=15pf				
+.param Rdmp1=54772.25ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	11	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750310059		2  9  1  10  3  6	
+.param RxLkg=8323.07ohm				
+.param Leakage=1.5uh				
+Rlkg	2	2a	{RxLkg}	
+L_Lkg	2	2a	{Leakage}	
+Lpri1	2a	2b	33.5uH	
+Rser1	2b	9	570mohm	
+Laux1	1	1a	6.699uH	
+Rser3	1a	10	530mohm	
+Lsec1	3	3a	0.547uH	
+Rser5	3a	6	2.8mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=2.32pf				
+.param Rdmp1=194204.93ohm				
+Cpri1	2	9a	{Cprm1}	
+Rser13	9a	9	10mohm	
+Rdmp1	2	9	{Rdmp1}	
+Rg3	2	0	20meg	
+Rg5	1	0	20meg	
+Rg7	9	0	20meg	
+Rg9	10	0	20meg	
+Rg11	3	0	20meg	
+Rg19	6	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750310167		1  3  2  4  5  6  12  11  10  9  8  7	
+.param RxLkg=1440.05ohm				
+.param Leakage=0.45uh				
+Rlkg	1	1a	{RxLkg/2}	
+L_Lkg	1	1a	{Leakage/2}	
+Rlkg2	2	2a	{RxLkg/2}	
+L_Lkg2	2	2a	{Leakage/2}	
+Lpri1	1a	1b	6.025uH	
+Rser1	1b	3	32mohm	
+Lpri2	2a	2b	6.025uH	
+Rser2	2b	4	32mohm	
+Laux1	5	5a	4uH	
+Rser3	5a	6	280mohm	
+Lsec1	12	12a	0.563uH	
+Rser5	12a	11	8.1mohm	
+Lsec2	10	10a	4uH	
+Rser6	10a	9	20.5mohm	
+Lsec3	8	8a	1uH	
+Rser7	8a	7	38mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=19.53pf				
+.param Cprm2=21pf				
+.param Rdmp1=20000.64ohm				
+.param Rdmp2=20000.64ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Cpri2	2	4a	{Cprm2}	
+Rser14	4a	4	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rdmp2	2	4	{Rdmp2}	
+Rg3	1	0	20meg	
+Rg4	2	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg8	4	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg12	10	0	20meg	
+Rg13	8	0	20meg	
+Rg19	11	0	20meg	
+Rg20	9	0	20meg	
+Rg21	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750310346		1  3  2  4  5  6  12  7  11  8  10  9	
+.param RxLkg=605.01ohm				
+.param Leakage=1uh				
+Rlkg	1	1a	{RxLkg*2}	
+L_Lkg	1	1a	{Leakage*2}	
+Rlkg2	2	2a	{RxLkg*2}	
+L_Lkg2	2	2a	{Leakage*2}	
+Lpri1	1a	1b	99uH	
+Rser1	1b	3	221.2mohm	
+Lpri2	2a	2b	99uH	
+Rser2	2b	4	185.1mohm	
+Laux1	5	5a	11.111uH	
+Rser3	5a	6	245mohm	
+Lsec1	12	12a	11.111uH	
+Rser5	12a	7	66.4mohm	
+Lsec2	11	11a	11.111uH	
+Rser6	11a	8	68.9mohm	
+Lsec3	10	10a	11.111uH	
+Rser7	10a	9	68.7mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=34.15pf				
+.param Cprm2=35.33pf				
+.param Rdmp1=60500.79ohm				
+.param Rdmp2=60500.79ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Cpri2	2	4a	{Cprm2}	
+Rser14	4a	4	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rdmp2	2	4	{Rdmp2}	
+Rg3	1	0	20meg	
+Rg4	2	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg8	4	0	20meg	
+Rg9	6	0	20meg	
+Rg11	12	0	20meg	
+Rg12	11	0	20meg	
+Rg13	10	0	20meg	
+Rg19	7	0	20meg	
+Rg20	8	0	20meg	
+Rg21	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750310744		5  3  2  1  6  9	
+.param RxLkg=2294.16ohm				
+.param Leakage=0.6uh				
+Rlkg	5	5a	{RxLkg}	
+L_Lkg	5	5a	{Leakage}	
+Lpri1	5a	5b	37.4uH	
+Rser1	5b	3	90mohm	
+Laux1	2	2a	38uH	
+Rser3	2a	1	200mohm	
+Lsec1	6	6a	6.08uH	
+Rser5	6a	9	3mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=4.5pf				
+.param Rdmp1=145296.6ohm				
+Cpri1	5	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	5	3	{Rdmp1}	
+Rg3	5	0	20meg	
+Rg5	2	0	20meg	
+Rg7	3	0	20meg	
+Rg9	1	0	20meg	
+Rg11	6	0	20meg	
+Rg19	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750310743		5  3  2  1  6  9	
+.param RxLkg=2019.71ohm				
+.param Leakage=0.625uh				
+Rlkg	5	5a	{RxLkg}	
+L_Lkg	5	5a	{Leakage}	
+Lpri1	5a	5b	37.375uH	
+Rser1	5b	3	82mohm	
+Laux1	2	2a	13.68uH	
+Rser3	2a	1	160mohm	
+Lsec1	6	6a	0.855uH	
+Rser5	6a	9	2mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=6.3pf				
+.param Rdmp1=122798.15ohm				
+Cpri1	5	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	5	3	{Rdmp1}	
+Rg3	5	0	20meg	
+Rg5	2	0	20meg	
+Rg7	3	0	20meg	
+Rg9	1	0	20meg	
+Rg11	6	0	20meg	
+Rg19	9	0	20meg	
+.ends
+				
+.subckt	PoE_EP13_750310742		5  3  2  1  6  10	
+.param RxLkg=1908.49ohm				
+.param Leakage=0.47uh				
+Rlkg	5	5a	{RxLkg}	
+L_Lkg	5	5a	{Leakage}	
+Lpri1	5a	5b	37.53uH	
+Rser1	5b	3	85mohm	
+Laux1	2	2a	11.495uH	
+Rser3	2a	1	155mohm	
+Lsec1	6	6a	9.5uH	
+Rser5	6a	10	25mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=3.99pf				
+.param Rdmp1=154303.38ohm				
+Cpri1	5	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	5	3	{Rdmp1}	
+Rg3	5	0	20meg	
+Rg5	2	0	20meg	
+Rg7	3	0	20meg	
+Rg9	1	0	20meg	
+Rg11	6	0	20meg	
+Rg19	10	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750310927		3  1  5  6  7  8	
+.param RxLkg=527.41ohm				
+.param Leakage=0.9uh				
+Rlkg	3	3a	{RxLkg}	
+L_Lkg	3	3a	{Leakage}	
+Lpri1	3a	3b	111.1uH	
+Rser1	3b	1	100mohm	
+Laux1	5	5a	3.111uH	
+Rser3	5a	6	60mohm	
+Lsec1	7	7a	12.444uH	
+Rser5	7a	8	50mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=65pf				
+.param Rdmp1=65632.85ohm				
+Cpri1	3	1a	{Cprm1}	
+Rser13	1a	1	10mohm	
+Rdmp1	3	1	{Rdmp1}	
+Rg3	3	0	20meg	
+Rg5	5	0	20meg	
+Rg7	1	0	20meg	
+Rg9	6	0	20meg	
+Rg11	7	0	20meg	
+Rg19	8	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_7491194912		1  3  5  6  10  7	
+.param RxLkg=515.95ohm				
+.param Leakage=0.5uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	41.5uH	
+Rser1	1b	3	60mohm	
+Laux1	5	5a	4.667uH	
+Rser3	5a	6	180mohm	
+Lsec1	10	10a	4.667uH	
+Rser5	10a	7	18mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=55.9pf				
+.param Rdmp1=43340.07ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	10	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750310926		1  3  5  6  7  8  11  12	
+.param RxLkg=570.54ohm				
+.param Leakage=0.5uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	39.5uH	
+Rser1	1b	3	40mohm	
+Laux1	5	5a	2.5uH	
+Rser3	5a	6	200mohm	
+Lsec1	7	7a	1.6uH	
+Rser5	7a	8	9mohm	
+Lsec2	11	11a	2.5uH	
+Rser6	11a	12	200mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=48pf				
+.param Rdmp1=45643.57ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	7	0	20meg	
+Rg12	11	0	20meg	
+Rg19	8	0	20meg	
+Rg20	12	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_749119450		1  3  5  6  10  7	
+.param RxLkg=625.59ohm				
+.param Leakage=0.8uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	64.3uH	
+Rser1	1b	3	100mohm	
+Laux1	5	5a	11.957uH	
+Rser3	5a	6	200mohm	
+Lsec1	10	10a	1.329uH	
+Rser5	10a	7	3mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=62.8pf				
+.param Rdmp1=50907.31ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	10	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_7491194501		1  3  5  6  10  7	
+.param RxLkg=765.56ohm				
+.param Leakage=0.8uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	41.2uH	
+Rser1	1b	3	90mohm	
+Laux1	5	5a	4.339uH	
+Rser3	5a	6	170mohm	
+Lsec1	10	10a	0.857uH	
+Rser5	10a	7	5mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=65pf				
+.param Rdmp1=40191.81ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	10	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_749119433		1  3  5  6  10  7	
+.param RxLkg=3401.55ohm				
+.param Leakage=3uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	39uH	
+Rser1	1b	3	99mohm	
+Laux1	5	5a	3.857uH	
+Rser3	5a	6	220mohm	
+Lsec1	10	10a	0.347uH	
+Rser5	10a	7	3.2mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=46.3pf				
+.param Rdmp1=47621.74ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	10	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750310925		1  3  5  6  7  8  11  12	
+.param RxLkg=1049.42ohm				
+.param Leakage=1.2uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	55.8uH	
+Rser1	1b	3	60mohm	
+Laux1	5	5a	3.563uH	
+Rser3	5a	6	350mohm	
+Lsec1	7	7a	0.891uH	
+Rser5	7a	8	8mohm	
+Lsec2	11	11a	3.563uH	
+Rser6	11a	12	350mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=57.35pf				
+.param Rdmp1=49847.22ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg9	6	0	20meg	
+Rg11	7	0	20meg	
+Rg12	11	0	20meg	
+Rg19	8	0	20meg	
+Rg20	12	0	20meg	
+.ends
+	
+
+
+**********************************
+************ WE-PoE++ **************			
+.subckt	PoE_EFD20_750319035		1  5  3  4  11  7	
+.param RxLkg=887.56ohm				
+.param Leakage=0.55uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	15.45uH	
+Rser1	1b	5	25mohm	
+Laux1	3	3a	4uH	
+Rser3	3a	4	227mohm	
+Lsec1	11	11a	0.735uH	
+Rser5	11a	7	5mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=60pf				
+.param Rdmp1=25819.87ohm				
+Cpri1	1	5a	{Cprm1}	
+Rser13	5a	5	10mohm	
+Rdmp1	1	5	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	3	0	20meg	
+Rg7	5	0	20meg	
+Rg9	4	0	20meg	
+Rg11	11	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPW15_750316335		1  3  4  5  8  6	
+.param RxLkg=614.19ohm				
+.param Leakage=0.325uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	49.675uH	
+Rser1	1b	3	26mohm	
+Laux1	4	4a	17.014uH	
+Rser3	4a	5	130mohm	
+Lsec1	8	8a	3.125uH	
+Rser5	8a	6	3mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=14pf				
+.param Rdmp1=94491.25ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	8	0	20meg	
+Rg19	6	0	20meg	
+.ends
+				
+.subckt	PoE_ER19_750343576		2  4  3  5  1  6  7  10  8  11	
+.param RxLkg=225.73ohm				
+.param Leakage=0.2uh				
+Rlkg	2	2a	{RxLkg/2}	
+L_Lkg	2	2a	{Leakage/2}	
+Rlkg2	3	3a	{RxLkg/2}	
+L_Lkg2	3	3a	{Leakage/2}	
+Lpri1	2a	2b	24.9uH	
+Rser1	2b	4	5.1mohm	
+Lpri2	3a	3b	24.9uH	
+Rser2	3b	5	5.1mohm	
+Laux1	1	1a	25uH	
+Rser3	1a	6	95mohm	
+Lsec1	7	7a	25uH	
+Rser5	7a	10	7.1mohm	
+Lsec2	8	8a	25uH	
+Rser6	8a	11	7.1mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2       1				
+.param Cprm1=39.25pf				
+.param Cprm2=39.75pf				
+.param Rdmp1=28216.69ohm				
+.param Rdmp2=28216.69ohm				
+Cpri1	2	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Cpri2	3	5a	{Cprm2}	
+Rser14	5a	5	10mohm	
+Rdmp1	2	4	{Rdmp1}	
+Rdmp2	3	5	{Rdmp2}	
+Rg3	2	0	20meg	
+Rg4	3	0	20meg	
+Rg5	1	0	20meg	
+Rg7	4	0	20meg	
+Rg8	5	0	20meg	
+Rg9	6	0	20meg	
+Rg11	7	0	20meg	
+Rg12	8	0	20meg	
+Rg19	10	0	20meg	
+Rg20	11	0	20meg	
+.ends
+				
+.subckt	PoE_ER19_750343164		2  4  3  5  1  6  7  10  8  11	
+.param RxLkg=176.7ohm				
+.param Leakage=0.43uh				
+Rlkg	2	2a	{RxLkg/2}	
+L_Lkg	2	2a	{Leakage/2}	
+Rlkg2	3	3a	{RxLkg/2}	
+L_Lkg2	3	3a	{Leakage/2}	
+Lpri1	2a	2b	78.535uH	
+Rser1	2b	4	5.2mohm	
+Lpri2	3a	3b	78.535uH	
+Rser2	3b	5	4.8mohm	
+Laux1	1	1a	123.047uH	
+Rser3	1a	6	160mohm	
+Lsec1	7	7a	4.922uH	
+Rser5	7a	10	0.75mohm	
+Lsec2	8	8a	4.922uH	
+Rser6	8a	11	0.42mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2       1				
+.param Cprm1=94pf				
+.param Cprm2=94pf				
+.param Rdmp1=32360.47ohm				
+.param Rdmp2=32360.47ohm				
+Cpri1	2	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Cpri2	3	5a	{Cprm2}	
+Rser14	5a	5	10mohm	
+Rdmp1	2	4	{Rdmp1}	
+Rdmp2	3	5	{Rdmp2}	
+Rg3	2	0	20meg	
+Rg4	3	0	20meg	
+Rg5	1	0	20meg	
+Rg7	4	0	20meg	
+Rg8	5	0	20meg	
+Rg9	6	0	20meg	
+Rg11	7	0	20meg	
+Rg12	8	0	20meg	
+Rg19	10	0	20meg	
+Rg20	11	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750318938		1  3  2  4  5  6  9  10  8  11  7  12	
+.param RxLkg=155.58ohm				
+.param Leakage=0.6uh				
+Rlkg	1	1a	{RxLkg/2}	
+L_Lkg	1	1a	{Leakage/2}	
+Rlkg2	2	2a	{RxLkg/2}	
+L_Lkg2	2	2a	{Leakage/2}	
+Lpri1	1a	1b	139.7uH	
+Rser1	1b	3	61mohm	
+Lpri2	2a	2b	139.7uH	
+Rser2	2b	4	61mohm	
+Laux1	5	5a	59.15uH	
+Rser3	5a	6	372mohm	
+Lsec1	9	9a	8.75uH	
+Rser5	9a	10	4mohm	
+Lsec2	8	8a	8.75uH	
+Rser6	8a	11	4mohm	
+Lsec3	7	7a	8.75uH	
+Rser7	7a	12	4mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=132.8pf				
+.param Cprm2=132.8pf				
+.param Rdmp1=36301.23ohm				
+.param Rdmp2=36301.23ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Cpri2	2	4a	{Cprm2}	
+Rser14	4a	4	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rdmp2	2	4	{Rdmp2}	
+Rg3	1	0	20meg	
+Rg4	2	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg8	4	0	20meg	
+Rg9	6	0	20meg	
+Rg11	9	0	20meg	
+Rg12	8	0	20meg	
+Rg13	7	0	20meg	
+Rg19	10	0	20meg	
+Rg20	11	0	20meg	
+Rg21	12	0	20meg	
+.ends	
+				
+.subckt	PoE_EFD20_750313355		1  3  2  4  5  6  7  10  8  11  9  12	
+.param RxLkg=426.47ohm				
+.param Leakage=0.479uh				
+Rlkg	1	1a	{RxLkg*2}	
+L_Lkg	1	1a	{Leakage*2}	
+Rlkg2	2	2a	{RxLkg*2}	
+L_Lkg2	2	2a	{Leakage*2}	
+Lpri1	1a	1b	99.521uH	
+Rser1	1b	3	102mohm	
+Lpri2	2a	2b	99.521uH	
+Rser2	2b	4	102mohm	
+Laux1	5	5a	25uH	
+Rser3	5a	6	229mohm	
+Lsec1	7	7a	25uH	
+Rser5	7a	10	33mohm	
+Lsec2	8	8a	25uH	
+Rser6	8a	11	33mohm	
+Lsec3	9	9a	25uH	
+Rser7	9a	12	33mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=15.7687pf				
+.param Cprm2=15.7802pf				
+.param Rdmp1=89033.99ohm				
+.param Rdmp2=89033.99ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Cpri2	2	4a	{Cprm2}	
+Rser14	4a	4	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rdmp2	2	4	{Rdmp2}	
+Rg3	1	0	20meg	
+Rg4	2	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg8	4	0	20meg	
+Rg9	6	0	20meg	
+Rg11	7	0	20meg	
+Rg12	8	0	20meg	
+Rg13	9	0	20meg	
+Rg19	10	0	20meg	
+Rg20	11	0	20meg	
+Rg21	12	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750310042		2  3  1  4  5  6  7  8	
+.param RxLkg=1100.96ohm				
+.param Leakage=2uh				
+Rlkg	2	2a	{RxLkg}	
+L_Lkg	2	2a	{Leakage}	
+Lpri1	2a	2b	273uH	
+Rser1	2b	3	40mohm	
+Laux1	1	1a	68.75uH	
+Rser3	1a	4	50mohm	
+Lsec1	5	5a	68.75uH	
+Rser5	5a	6	10mohm	
+Lsec2	7	7a	68.75uH	
+Rser6	7a	8	20mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=30pf				
+.param Rdmp1=151382.67ohm				
+Cpri1	2	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	2	3	{Rdmp1}	
+Rg3	2	0	20meg	
+Rg5	1	0	20meg	
+Rg7	3	0	20meg	
+Rg9	4	0	20meg	
+Rg11	5	0	20meg	
+Rg12	7	0	20meg	
+Rg19	6	0	20meg	
+Rg20	8	0	20meg	
+.ends
+				
+.subckt	PoE_EPW15_750316336		1  3  4  5  8  6	
+.param RxLkg=651.77ohm				
+.param Leakage=0.47uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	49.53uH	
+Rser1	1b	3	14mohm	
+Laux1	4	4a	12.5uH	
+Rser3	4a	5	62mohm	
+Lsec1	8	8a	12.5uH	
+Rser5	8a	6	8mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=26pf				
+.param Rdmp1=69337.46ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	8	0	20meg	
+Rg19	6	0	20meg	
+.ends
+				
+.subckt	PoE_EPW15_750316334		1  3  4  5  8  6	
+.param RxLkg=816.67ohm				
+.param Leakage=0.49uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	49.51uH	
+Rser1	1b	3	25mohm	
+Laux1	4	4a	12.5uH	
+Rser3	4a	5	83mohm	
+Lsec1	8	8a	1.02uH	
+Rser5	8a	6	3mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=18pf				
+.param Rdmp1=83333.26ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	8	0	20meg	
+Rg19	6	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750313095		2  4  3  5  1  6  8  12  7  11	
+.param RxLkg=566.06ohm				
+.param Leakage=0.5uh				
+Rlkg	2	2a	{RxLkg/2}	
+L_Lkg	2	2a	{Leakage/2}	
+Rlkg2	3	3a	{RxLkg/2}	
+L_Lkg2	3	3a	{Leakage/2}	
+Lpri1	2a	2b	61.475uH	
+Rser1	2b	4	19mohm	
+Lpri2	3a	3b	61.475uH	
+Rser2	3b	5	21.6mohm	
+Laux1	1	1a	102.035uH	
+Rser3	1a	6	188mohm	
+Lsec1	8	8a	20.155uH	
+Rser5	8a	12	13mohm	
+Lsec2	7	7a	20.155uH	
+Rser6	7a	11	12.6mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2       1				
+.param Cprm1=15.8pf				
+.param Cprm2=15.8pf				
+.param Rdmp1=69880.69ohm				
+.param Rdmp2=69880.69ohm				
+Cpri1	2	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Cpri2	3	5a	{Cprm2}	
+Rser14	5a	5	10mohm	
+Rdmp1	2	4	{Rdmp1}	
+Rdmp2	3	5	{Rdmp2}	
+Rg3	2	0	20meg	
+Rg4	3	0	20meg	
+Rg5	1	0	20meg	
+Rg7	4	0	20meg	
+Rg8	5	0	20meg	
+Rg9	6	0	20meg	
+Rg11	8	0	20meg	
+Rg12	7	0	20meg	
+Rg19	12	0	20meg	
+Rg20	11	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750318961		1  5  3  4  11  7	
+.param RxLkg=161.37ohm				
+.param Leakage=0.25uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	99.75uH	
+Rser1	1b	5	12.7mohm	
+Laux1	3	3a	39.063uH	
+Rser3	3a	4	80mohm	
+Lsec1	11	11a	6.25uH	
+Rser5	11a	7	2mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=60pf				
+.param Rdmp1=64549.68ohm				
+Cpri1	1	5a	{Cprm1}	
+Rser13	5a	5	10mohm	
+Rdmp1	1	5	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	3	0	20meg	
+Rg7	5	0	20meg	
+Rg9	4	0	20meg	
+Rg11	11	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750318962		1  5  3  4  12  9  10  7	
+.param RxLkg=81.65ohm				
+.param Leakage=0.2uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	99.8uH	
+Rser1	1b	5	9mohm	
+Laux1	3	3a	39.063uH	
+Rser3	3a	4	68mohm	
+Lsec1	12	12a	39.063uH	
+Rser5	12a	9	10mohm	
+Lsec2	10	10a	39.063uH	
+Rser6	10a	7	10mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=150pf				
+.param Rdmp1=40825ohm				
+Cpri1	1	5a	{Cprm1}	
+Rser13	5a	5	10mohm	
+Rdmp1	1	5	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	3	0	20meg	
+Rg7	5	0	20meg	
+Rg9	4	0	20meg	
+Rg11	12	0	20meg	
+Rg12	10	0	20meg	
+Rg19	9	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD25_750319020		1  5  3  4  11  7	
+.param RxLkg=442.81ohm				
+.param Leakage=0.4uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	16.6uH	
+Rser1	1b	5	11mohm	
+Laux1	3	3a	4.25uH	
+Rser3	3a	4	122mohm	
+Lsec1	11	11a	0.68uH	
+Rser5	11a	7	2mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=120pf				
+.param Rdmp1=18819.26ohm				
+Cpri1	1	5a	{Cprm1}	
+Rser13	5a	5	10mohm	
+Rdmp1	1	5	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	3	0	20meg	
+Rg7	5	0	20meg	
+Rg9	4	0	20meg	
+Rg11	11	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD25_750319021		1  5  3  4  10  7	
+.param RxLkg=486.56ohm				
+.param Leakage=0.5uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	21.5uH	
+Rser1	1b	5	12mohm	
+Laux1	3	3a	3.819uH	
+Rser3	3a	4	125mohm	
+Lsec1	10	10a	3.819uH	
+Rser5	10a	7	4mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=120pf				
+.param Rdmp1=21408.66ohm				
+Cpri1	1	5a	{Cprm1}	
+Rser13	5a	5	10mohm	
+Rdmp1	1	5	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	3	0	20meg	
+Rg7	5	0	20meg	
+Rg9	4	0	20meg	
+Rg11	10	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD25_750319032		1  5  3  4  11  7	
+.param RxLkg=381.39ohm				
+.param Leakage=0.48uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	21.52uH	
+Rser1	1b	5	12mohm	
+Laux1	3	3a	3.819uH	
+Rser3	3a	4	125mohm	
+Lsec1	11	11a	15.278uH	
+Rser5	11a	7	12mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=180pf				
+.param Rdmp1=17480.16ohm				
+Cpri1	1	5a	{Cprm1}	
+Rser13	5a	5	10mohm	
+Rdmp1	1	5	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	3	0	20meg	
+Rg7	5	0	20meg	
+Rg9	4	0	20meg	
+Rg11	11	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750319033		1  6  3  4  10  7	
+.param RxLkg=260.64ohm				
+.param Leakage=0.25uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	99.75uH	
+Rser1	1b	6	11mohm	
+Laux1	3	3a	39.063uH	
+Rser3	3a	4	51mohm	
+Lsec1	10	10a	6.25uH	
+Rser5	10a	7	2mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=23pf				
+.param Rdmp1=104256.89ohm				
+Cpri1	1	6a	{Cprm1}	
+Rser13	6a	6	10mohm	
+Rdmp1	1	6	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	3	0	20meg	
+Rg7	6	0	20meg	
+Rg9	4	0	20meg	
+Rg11	10	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750319034		1  6  3  4  12  9  11  8	
+.param RxLkg=73.03ohm				
+.param Leakage=0.16uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	99.84uH	
+Rser1	1b	6	11mohm	
+Laux1	3	3a	39.063uH	
+Rser3	3a	4	51mohm	
+Lsec1	12	12a	39.063uH	
+Rser5	12a	9	9mohm	
+Lsec2	11	11a	39.063uH	
+Rser6	11a	8	9mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=120pf				
+.param Rdmp1=45643.57ohm				
+Cpri1	1	6a	{Cprm1}	
+Rser13	6a	6	10mohm	
+Rdmp1	1	6	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	3	0	20meg	
+Rg7	6	0	20meg	
+Rg9	4	0	20meg	
+Rg11	12	0	20meg	
+Rg12	11	0	20meg	
+Rg19	9	0	20meg	
+Rg20	8	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750319036		1  5  3  4  10  7	
+.param RxLkg=595.91ohm				
+.param Leakage=0.5uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	15.5uH	
+Rser1	1b	5	24mohm	
+Laux1	3	3a	2.939uH	
+Rser3	3a	4	200mohm	
+Lsec1	10	10a	2.939uH	
+Rser5	10a	7	5mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=110pf				
+.param Rdmp1=19069.22ohm				
+Cpri1	1	5a	{Cprm1}	
+Rser13	5a	5	10mohm	
+Rdmp1	1	5	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	3	0	20meg	
+Rg7	5	0	20meg	
+Rg9	4	0	20meg	
+Rg11	10	0	20meg	
+Rg19	7	0	20meg	
+.ends
+				
+.subckt	PoE_EFD20_750319069		1  5  3  4  11  7	
+.param RxLkg=405.17ohm				
+.param Leakage=0.41uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	15.59uH	
+Rser1	1b	5	22mohm	
+Laux1	3	3a	4uH	
+Rser3	3a	4	150mohm	
+Lsec1	11	11a	13.796uH	
+Rser5	11a	7	22mohm	
+K Lpri1  Laux1  Lsec1        1				
+.param Cprm1=160pf				
+.param Rdmp1=15811.41ohm				
+Cpri1	1	5a	{Cprm1}	
+Rser13	5a	5	10mohm	
+Rdmp1	1	5	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	3	0	20meg	
+Rg7	5	0	20meg	
+Rg9	4	0	20meg	
+Rg11	11	0	20meg	
+Rg19	7	0	20meg	
+.ends
+		
+
+
+**********************************
+************ WE-PoE **************		
+.subckt	PoE_EPQ13_749119550		1  3  4  5  9  6  10  7	
+.param RxLkg=1242.26ohm				
+.param Leakage=0.4uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	47.6uH	
+Rser1	1b	3	50mohm	
+Laux1	4	4a	6.75uH	
+Rser3	4a	5	80mohm	
+Lsec1	9	9a	1.688uH	
+Rser5	9a	6	7mohm	
+Lsec2	10	10a	1.688uH	
+Rser6	10a	7	7mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=5.4pf				
+.param Rdmp1=149071.34ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_7491195331		1  3  4  5  9  6  10  7	
+.param RxLkg=791.56ohm				
+.param Leakage=0.2uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	20.8uH	
+Rser1	1b	3	20mohm	
+Laux1	4	4a	11.813uH	
+Rser3	4a	5	120mohm	
+Lsec1	9	9a	1.313uH	
+Rser5	9a	6	7mohm	
+Lsec2	10	10a	1.313uH	
+Rser6	10a	7	7mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=7.6pf				
+.param Rdmp1=83113.74ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_749119533		1  3  4  5  9  6  10  7	
+.param RxLkg=1506.46ohm				
+.param Leakage=0.5uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	53.5uH	
+Rser1	1b	3	50mohm	
+Laux1	4	4a	7.594uH	
+Rser3	4a	5	80mohm	
+Lsec1	9	9a	0.844uH	
+Rser5	9a	6	4mohm	
+Lsec2	10	10a	0.844uH	
+Rser6	10a	7	4mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=5.1pf				
+.param Rdmp1=162697.98ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_7491195224		1  3  4  5  9  6  10  7	
+.param RxLkg=344.06ohm				
+.param Leakage=0.23uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	20.77uH	
+Rser1	1b	3	20mohm	
+Laux1	4	4a	9.333uH	
+Rser3	4a	5	110mohm	
+Lsec1	9	9a	47.25uH	
+Rser5	9a	6	110mohm	
+Lsec2	10	10a	47.25uH	
+Rser6	10a	7	110mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=53.2pf				
+.param Rdmp1=31414.05ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_7491195212		1  3  4  5  9  6  10  7	
+.param RxLkg=377.96ohm				
+.param Leakage=0.12uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	20.88uH	
+Rser1	1b	3	25mohm	
+Laux1	4	4a	9.333uH	
+Rser3	4a	5	110mohm	
+Lsec1	9	9a	11.813uH	
+Rser5	9a	6	47mohm	
+Lsec2	10	10a	11.813uH	
+Rser6	10a	7	47mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=12pf				
+.param Rdmp1=66143.79ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_7491195112		1  3  4  5  9  6  10  7	
+.param RxLkg=879.16ohm				
+.param Leakage=0.3uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	40.7uH	
+Rser1	1b	3	53mohm	
+Laux1	4	4a	5.766uH	
+Rser3	4a	5	83mohm	
+Lsec1	9	9a	5.766uH	
+Rser5	9a	6	16mohm	
+Lsec2	10	10a	5.766uH	
+Rser6	10a	7	19mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=7.1pf				
+.param Rdmp1=120152.42ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_7491195501		1  3  4  5  9  6  10  7	
+.param RxLkg=843.05ohm				
+.param Leakage=0.2uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	20.8uH	
+Rser1	1b	3	30mohm	
+Laux1	4	4a	9.333uH	
+Rser3	4a	5	110mohm	
+Lsec1	9	9a	2.333uH	
+Rser5	9a	6	10mohm	
+Lsec2	10	10a	2.333uH	
+Rser6	10a	7	10mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=6.7pf				
+.param Rdmp1=88520.13ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_7491196212		1  3  4  5  9  6  10  7	
+.param RxLkg=8.04ohm				
+.param Leakage=0.02uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	127.98uH	
+Rser1	1b	3	10mohm	
+Laux1	4	4a	392uH	
+Rser3	4a	5	300mohm	
+Lsec1	9	9a	578uH	
+Rser5	9a	6	80mohm	
+Lsec2	10	10a	578uH	
+Rser6	10a	7	100mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=121pf				
+.param Rdmp1=51426.01ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_7491196112		1  3  4  5  9  6  10  7	
+.param RxLkg=307.15ohm				
+.param Leakage=0.2uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	99.8uH	
+Rser1	1b	3	40mohm	
+Laux1	4	4a	25uH	
+Rser3	4a	5	80mohm	
+Lsec1	9	9a	34.028uH	
+Rser5	9a	6	20mohm	
+Lsec2	10	10a	34.028uH	
+Rser6	10a	7	30mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=10.6pf				
+.param Rdmp1=153573.62ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_7491196501		1  3  4  5  9  6  10  7	
+.param RxLkg=65.59ohm				
+.param Leakage=0.1uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	127.9uH	
+Rser1	1b	3	10mohm	
+Laux1	4	4a	392uH	
+Rser3	4a	5	300mohm	
+Lsec1	9	9a	98uH	
+Rser5	9a	6	20mohm	
+Lsec2	10	10a	98uH	
+Rser6	10a	7	30mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=45.4pf				
+.param Rdmp1=83955.42ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_749119650		1  3  4  5  9  6  10  7	
+.param RxLkg=168.55ohm				
+.param Leakage=0.1uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	99.9uH	
+Rser1	1b	3	30mohm	
+Laux1	4	4a	25uH	
+Rser3	4a	5	90mohm	
+Lsec1	9	9a	6.25uH	
+Rser5	9a	6	7mohm	
+Lsec2	10	10a	6.25uH	
+Rser6	10a	7	7mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=8.8pf				
+.param Rdmp1=168550.22ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_7491196331		1  3  4  5  9  6  10  7	
+.param RxLkg=454.75ohm				
+.param Leakage=0.3uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	127.7uH	
+Rser1	1b	3	50mohm	
+Laux1	4	4a	98uH	
+Rser3	4a	5	300mohm	
+Lsec1	9	9a	12.5uH	
+Rser5	9a	6	10mohm	
+Lsec2	10	10a	12.5uH	
+Rser6	10a	7	10mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=8.5pf				
+.param Rdmp1=194028.78ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+				
+.subckt	PoE_EPQ13_749119633		1  3  4  5  9  6  10  7	
+.param RxLkg=617.54ohm				
+.param Leakage=0.3uh				
+Rlkg	1	1a	{RxLkg}	
+L_Lkg	1	1a	{Leakage}	
+Lpri1	1a	1b	99.7uH	
+Rser1	1b	3	20mohm	
+Laux1	4	4a	25uH	
+Rser3	4a	5	80mohm	
+Lsec1	9	9a	2.778uH	
+Rser5	9a	6	6mohm	
+Lsec2	10	10a	2.778uH	
+Rser6	10a	7	6mohm	
+K Lpri1  Laux1  Lsec1 Lsec2       1				
+.param Cprm1=5.9pf				
+.param Rdmp1=205846.58ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rg3	1	0	20meg	
+Rg5	4	0	20meg	
+Rg7	3	0	20meg	
+Rg9	5	0	20meg	
+Rg11	9	0	20meg	
+Rg12	10	0	20meg	
+Rg19	6	0	20meg	
+Rg20	7	0	20meg	
+.ends
+
+.subckt	PoE_EFD20_750320237		1  3  2  4  5  6  9  10  8  11  7  12	
+.param RxLkg=154.33ohm				
+.param Leakage=0.275uh				
+Rlkg	1	1a	{RxLkg/2}	
+L_Lkg	1	1a	{Leakage/2}	
+Rlkg2	2	2a	{RxLkg/2}	
+L_Lkg2	2	2a	{Leakage/2}	
+Lpri1	1a	1b	24.863uH	
+Rser1	1b	3	25mohm	
+Lpri2	2a	2b	24.863uH	
+Rser2	2b	4	25mohm	
+Laux1	5	5a	6.25uH	
+Rser3	5a	6	22.5mohm	
+Lsec1	9	9a	25uH	
+Rser5	9a	10	14.3mohm	
+Lsec2	8	8a	25uH	
+Rser6	8a	11	14.3mohm	
+Lsec3	7	7a	25uH	
+Rser7	7a	12	14.3mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2 Lsec3      1				
+.param Cprm1=158.76pf				
+.param Cprm2=158.76pf				
+.param Rdmp1=14029.88ohm				
+.param Rdmp2=14029.88ohm				
+Cpri1	1	3a	{Cprm1}	
+Rser13	3a	3	10mohm	
+Cpri2	2	4a	{Cprm2}	
+Rser14	4a	4	10mohm	
+Rdmp1	1	3	{Rdmp1}	
+Rdmp2	2	4	{Rdmp2}	
+Rg3	1	0	20meg	
+Rg4	2	0	20meg	
+Rg5	5	0	20meg	
+Rg7	3	0	20meg	
+Rg8	4	0	20meg	
+Rg9	6	0	20meg	
+Rg11	9	0	20meg	
+Rg12	8	0	20meg	
+Rg13	7	0	20meg	
+Rg19	10	0	20meg	
+Rg20	11	0	20meg	
+Rg21	12	0	20meg	
+.ends				
+
+.subckt	PoE_ER19_750341794		2  4  3  5  1  6  7  10  8  11	
+.param RxLkg=150.52ohm				
+.param Leakage=0.2022uh				
+Rlkg	2	2a	{RxLkg/2}	
+L_Lkg	2	2a	{Leakage/2}	
+Rlkg2	3	3a	{RxLkg/2}	
+L_Lkg2	3	3a	{Leakage/2}	
+Lpri1	2a	2b	56.749uH	
+Rser1	2b	4	4.8mohm	
+Lpri2	3a	3b	56.749uH	
+Rser2	3b	5	4.8mohm	
+Laux1	1	1a	56.85uH	
+Rser3	1a	6	72.3mohm	
+Lsec1	7	7a	14.213uH	
+Rser5	7a	10	1.806mohm	
+Lsec2	8	8a	14.213uH	
+Rser6	8a	11	1.674mohm	
+K Lpri1 Lpri2 Laux1  Lsec1 Lsec2       1				
+.param Cprm1=39.68pf				
+.param Cprm2=39.68pf				
+.param Rdmp1=42318.8ohm				
+.param Rdmp2=42318.8ohm				
+Cpri1	2	4a	{Cprm1}	
+Rser13	4a	4	10mohm	
+Cpri2	3	5a	{Cprm2}	
+Rser14	5a	5	10mohm	
+Rdmp1	2	4	{Rdmp1}	
+Rdmp2	3	5	{Rdmp2}	
+Rg3	2	0	20meg	
+Rg4	3	0	20meg	
+Rg5	1	0	20meg	
+Rg7	4	0	20meg	
+Rg8	5	0	20meg	
+Rg9	6	0	20meg	
+Rg11	7	0	20meg	
+Rg12	8	0	20meg	
+Rg19	10	0	20meg	
+Rg20	11	0	20meg	
+.ends				

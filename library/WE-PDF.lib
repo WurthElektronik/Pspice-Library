@@ -1,0 +1,202 @@
+**************************************************
+* Manufacturer:           Wurth Elektronik 
+* Kinds:                  SMT Power Inductor
+* Matchcode:              WE-PDF
+* Library Type:           Pspice
+* Version:                rev24a
+* Created/modified by:    Ella
+* Date and Time:          7/12/2024
+* Team:                   eiSos EDA Service  
+* Contact:                libraries@we-online.com
+**************************************************
+* Copyright(C) 2024 Würth Elektronik eiSos GmbH & Co. KG	
+* All Rights Reserved.	
+**************************************************	
+* Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy	
+* of the simulation models provided, Würth Elektronik eiSos does not guarantee the exemption of error on	
+* the simulation models, nor does Würth Elektronik eiSos guarantee that the simulation model is current.	
+* Würth Elektronik eiSos reserves the right to make any adjustments at any time without notice.	
+* Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.	
+**************************************************
+.subckt PDF_1045_7447797022_0u22 1 2
+Rp 1 2 335.63
+Cp 1 2 1.51p
+Rs 1 N3 0.0029
+L1 N3 2 0.0878u
+.ends PDF_1045_7447797022_0u22
+*******
+.subckt PDF_1045_7447797050_0u5 1 2
+Rp 1 2 757.376
+Cp 1 2 2.506p
+Rs 1 N3 0.0043
+L1 N3 2 0.218u
+.ends PDF_1045_7447797050_0u5
+*******
+.subckt PDF_1045_7447797110_1u1 1 2
+Rp 1 2 1278
+Cp 1 2 2.858p
+Rs 1 N3 0.0059
+L1 N3 2 0.422u
+.ends PDF_1045_7447797110_1u1
+*******
+.subckt PDF_1045_7447797180_1u8 1 2
+Rp 1 2 1875
+Cp 1 2 3.694p
+Rs 1 N3 0.0074
+L1 N3 2 0.692u
+.ends PDF_1045_7447797180_1u8
+*******
+.subckt PDF_1045_7447797250_2u5 1 2
+Rp 1 2 2698
+Cp 1 2 4.424p
+Rs 1 N3 0.009
+L1 N3 2 0.489u
+.ends PDF_1045_7447797250_2u5
+*******
+.subckt PDF_1045_7447797360_3u6 1 2
+Rp 1 2 3332
+Cp 1 2 5.771p
+Rs 1 N3 0.0108
+L1 N3 2 1.383u
+.ends PDF_1045_7447797360_3u6
+*******
+.subckt PDF_1045_7447797470_4u7 1 2
+Rp 1 2 4483
+Cp 1 2 4.902p
+Rs 1 N3 0.0173
+L1 N3 2 1.933u
+.ends PDF_1045_7447797470_4u7
+*******
+.subckt PDF_1045_7447797620_6u2 1 2
+Rp 1 2 5646
+Cp 1 2 4.737p
+Rs 1 N3 0.0198
+L1 N3 2 2.478u
+.ends PDF_1045_7447797620_6u2
+*******
+.subckt PDF_1045_7447797820_8u2 1 2
+Rp 1 2 7211
+Cp 1 2 6.259p
+Rs 1 N3 0.0253
+L1 N3 2 3.545u
+.ends PDF_1045_7447797820_8u2
+*******
+.subckt PDF_1064_7447798022_0u22 1 2
+Rp 1 2 497.338168
+Cp 1 2 1.63832p
+Rs 1 N3 0.0016
+L1 N3 2 0.1543928u
+.ends PDF_1064_7447798022_0u22
+*******
+.subckt PDF_1064_7447798050_0u5 1 2
+Rp 1 2 1102.65017099
+Cp 1 2 1.442523875p
+Rs 1 N3 0.0022
+L1 N3 2 0.409657939024u
+.ends PDF_1064_7447798050_0u5
+*******
+.subckt PDF_1064_7447798110_1u1 1 2
+Rp 1 2 913.7310025849
+Cp 1 2 3.938084935p
+Rs 1 N3 0.003
+L1 N3 2 0.3981546581409u
+.ends PDF_1064_7447798110_1u1
+*******
+.subckt PDF_1064_7447798111_11u 1 2
+Rp 1 2 6329.523789889
+Cp 1 2 8.3389870965p
+Rs 1 N3 0.014
+L1 N3 2 4.498155554183u
+.ends PDF_1064_7447798111_11u
+*******
+.subckt PDF_1064_7447798131_13u 1 2
+Rp 1 2 8218.989016068
+Cp 1 2 7.2783690849p
+Rs 1 N3 0.0199
+L1 N3 2 5.413875265997u
+.ends PDF_1064_7447798131_13u
+*******
+.subckt PDF_1064_7447798151_15u 1 2
+Rp 1 2 9416.195578389
+Cp 1 2 7.5117084403p
+Rs 1 N3 0.0218
+L1 N3 2 6.852678019177u
+.ends PDF_1064_7447798151_15u
+*******
+.subckt PDF_1064_7447798180_1u8 1 2
+Rp 1 2 1412.78025218
+Cp 1 2 5.011541266p
+Rs 1 N3 0.0038
+L1 N3 2 0.612650483751u
+.ends PDF_1064_7447798180_1u8
+*******
+.subckt PDF_1064_7447798181_18u 1 2
+Rp 1 2 10316.08307543
+Cp 1 2 8.3391651708p
+Rs 1 N3 0.0305
+L1 N3 2 7.758277773986u
+.ends PDF_1064_7447798181_18u
+*******
+.subckt PDF_1064_7447798221_22u 1 2
+Rp 1 2 23646.39582884
+Cp 1 2 3.6136581063p
+Rs 1 N3 0.033
+L1 N3 2 18.9555299645u
+.ends PDF_1064_7447798221_22u
+*******
+.subckt PDF_1064_7447798241_24u 1 2
+Rp 1 2 20839.84044435
+Cp 1 2 3.6219463277p
+Rs 1 N3 0.035
+L1 N3 2 20.42523913023u
+.ends PDF_1064_7447798241_24u
+*******
+.subckt PDF_1064_7447798250_2u5 1 2
+Rp 1 2 2021.771740546
+Cp 1 2 5.7450252986p
+Rs 1 N3 0.0044
+L1 N3 2 0.9366024544953u
+.ends PDF_1064_7447798250_2u5
+*******
+.subckt PDF_1064_7447798271_27u 1 2
+Rp 1 2 13298.95044049
+Cp 1 2 8.2407890231p
+Rs 1 N3 0.0376
+L1 N3 2 11.07620259681u
+.ends PDF_1064_7447798271_27u
+*******
+.subckt PDF_1064_7447798360_3u6 1 2
+Rp 1 2 5338.531151511
+Cp 1 2 3.2232084365p
+Rs 1 N3 0.00525
+L1 N3 2 2.43570094658u
+.ends PDF_1064_7447798360_3u6
+*******
+.subckt PDF_1064_7447798470_4u7 1 2
+Rp 1 2 2960.5762934425
+Cp 1 2 6.34866352225p
+Rs 1 N3 0.0074
+L1 N3 2 1.7266174181425u
+.ends PDF_1064_7447798470_4u7
+*******
+.subckt PDF_1064_7447798620_6u2 1 2
+Rp 1 2 3796.31592596143
+Cp 1 2 6.53213127985714p
+Rs 1 N3 0.0084
+L1 N3 2 2.14765560350714u
+.ends PDF_1064_7447798620_6u2
+*******
+.subckt PDF_1064_7447798720_7u2 1 2
+Rp 1 2 4669.941679494
+Cp 1 2 7.9060157648p
+Rs 1 N3 0.0113
+L1 N3 2 2.881274362062u
+.ends PDF_1064_7447798720_7u2
+*******
+.subckt PDF_1064_7447798910_9u1 1 2
+Rp 1 2 5198.487809543
+Cp 1 2 7.1517874194p
+Rs 1 N3 0.0127
+L1 N3 2 3.373599165876u
+.ends PDF_1064_7447798910_9u1
+*******

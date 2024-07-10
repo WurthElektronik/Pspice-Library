@@ -1,0 +1,251 @@
+**************************************************
+* Manufacturer:          Wurth Elektronik 
+* Kinds:                 SMD Power Inductor
+* Matchcode:             WE-XHMA
+* Library Type:          Pspice
+* Version:               rev22b
+* Created/modified by:   Ella
+* Date and Time:         6/8/2022
+* Team:                  eiSos EDA Service  
+* Contact:               libraries@we-online.com
+**************************************************
+* Copyright(C) 2022 Würth Elektronik eiSos GmbH & Co. KG
+* All Rights Reserved.
+**************************************************
+* Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
+* of the simulation models provided, Würth Elektronik eiSos does not guarantee the exemption of error on
+* the simulation models, nor does Würth Elektronik eiSos guarantee that the simulation model is current.
+* Würth Elektronik eiSos reserves the right to make any adjustments at any time without notice.
+* Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.
+**************************************************
+.subckt XHMA_6030_784393440018_0u18 1 2
+Rp 1 2 393.041
+Cp 1 2 5.062p
+Rs 1 N3 0.00132
+L1 N3 2 0.176u
+.ends XHMA_6030_784393440018_0u18
+*******
+.subckt XHMA_6030_784393440033_0u33 1 2
+Rp 1 2 683.781
+Cp 1 2 6.324p
+Rs 1 N3 0.0021
+L1 N3 2 0.316u
+.ends XHMA_6030_784393440033_0u33
+*******
+.subckt XHMA_6030_784393440056_0u56 1 2
+Rp 1 2 876.79
+Cp 1 2 7.515p
+Rs 1 N3 0.0029
+L1 N3 2 0.561u
+.ends XHMA_6030_784393440056_0u56
+*******
+.subckt XHMA_6030_78439344010_1u 1 2
+Rp 1 2 1956
+Cp 1 2 7.102p
+Rs 1 N3 0.0055
+L1 N3 2 1.008u
+.ends XHMA_6030_78439344010_1u
+*******
+.subckt XHMA_6030_78439344012_1u2 1 2
+Rp 1 2 2178
+Cp 1 2 8.182p
+Rs 1 N3 0.0064
+L1 N3 2 1.105u
+.ends XHMA_6030_78439344012_1u2
+*******
+.subckt XHMA_6030_78439344022_2u2 1 2
+Rp 1 2 2927
+Cp 1 2 8.36p
+Rs 1 N3 0.0105
+L1 N3 2 2.182u
+.ends XHMA_6030_78439344022_2u2
+*******
+.subckt XHMA_6030_78439344033_3u3 1 2
+Rp 1 2 4970
+Cp 1 2 7.979p
+Rs 1 N3 0.0192
+L1 N3 2 3.247u
+.ends XHMA_6030_78439344033_3u3
+*******
+.subckt XHMA_6030_78439344047_4u7 1 2
+Rp 1 2 7211
+Cp 1 2 7.002p
+Rs 1 N3 0.031
+L1 N3 2 4.676u
+.ends XHMA_6030_78439344047_4u7
+*******
+.subckt XHMA_6060_78439346047_4u7 1 2
+Rp 1 2 4305
+Cp 1 2 7.633p
+Rs 1 N3 0.013
+L1 N3 2 4.289u
+.ends XHMA_6060_78439346047_4u7
+*******
+.subckt XHMA_6060_78439346056_5u6 1 2
+Rp 1 2 5112
+Cp 1 2 7.79p
+Rs 1 N3 0.015
+L1 N3 2 5.311u
+.ends XHMA_6060_78439346056_5u6
+*******
+.subckt XHMA_6060_78439346068_6u8 1 2
+Rp 1 2 5867
+Cp 1 2 7.976p
+Rs 1 N3 0.0176
+L1 N3 2 6.553u
+.ends XHMA_6060_78439346068_6u8
+*******
+.subckt XHMA_6060_78439346082_8u2 1 2
+Rp 1 2 6820
+Cp 1 2 8.668p
+Rs 1 N3 0.023
+L1 N3 2 7.855u
+.ends XHMA_6060_78439346082_8u2
+*******
+.subckt XHMA_6060_78439346100_10 1 2
+Rp 1 2 9786
+Cp 1 2 8.192p
+Rs 1 N3 0.0265
+L1 N3 2 9.539u
+.ends XHMA_6060_78439346100_10
+*******
+.subckt XHMA_8080_78439358010_1u 1 2
+Rp 1 2 1445
+Cp 1 2 8.916p
+Rs 1 N3 0.0021
+L1 N3 2 1.014u
+.ends XHMA_8080_78439358010_1u
+*******
+.subckt XHMA_8080_78439358022_2u2 1 2
+Rp 1 2 2282
+Cp 1 2 10.434p
+Rs 1 N3 0.0037
+L1 N3 2 2.209u
+.ends XHMA_8080_78439358022_2u2
+*******
+.subckt XHMA_8080_78439358047_4u7 1 2
+Rp 1 2 4439
+Cp 1 2 10.924p
+Rs 1 N3 0.00865
+L1 N3 2 4.785u
+.ends XHMA_8080_78439358047_4u7
+*******
+.subckt XHMA_8080_78439358068_6u8 1 2
+Rp 1 2 6545
+Cp 1 2 7.924p
+Rs 1 N3 0.013
+L1 N3 2 6.596u
+.ends XHMA_8080_78439358068_6u8
+*******
+.subckt XHMA_8080_78439358100_10u 1 2
+Rp 1 2 8417
+Cp 1 2 8.116p
+Rs 1 N3 0.019
+L1 N3 2 10.282u
+.ends XHMA_8080_78439358100_10u
+*******
+.subckt XHMA_1090_78439369022_2u2 1 2
+Rp 1 2 2074
+Cp 1 2 14.601p
+Rs 1 N3 0.0022
+L1 N3 2 2.242u
+.ends XHMA_1090_78439369022_2u2
+*******
+.subckt XHMA_1090_78439369033_3u3 1 2
+Rp 1 2 3017
+Cp 1 2 14.697p
+Rs 1 N3 0.0034
+L1 N3 2 3.164u
+.ends XHMA_1090_78439369033_3u3
+*******
+.subckt XHMA_1090_78439369047_4u7 1 2
+Rp 1 2 4114
+Cp 1 2 12.704p
+Rs 1 N3 0.005
+L1 N3 2 4.625u
+.ends XHMA_1090_78439369047_4u7
+*******
+.subckt XHMA_1090_78439369056_5u6 1 2
+Rp 1 2 4898
+Cp 1 2 13.52p
+Rs 1 N3 0.0059
+L1 N3 2 5.491u
+.ends XHMA_1090_78439369056_5u6
+*******
+.subckt XHMA_1090_78439369068_6u8 1 2
+Rp 1 2 5791
+Cp 1 2 14.891p
+Rs 1 N3 0.00716
+L1 N3 2 7.08u
+.ends XHMA_1090_78439369068_6u8
+*******
+.subckt XHMA_1090_78439369082_8u2 1 2
+Rp 1 2 7214
+Cp 1 2 12.059p
+Rs 1 N3 0.01
+L1 N3 2 8.743u
+.ends XHMA_1090_78439369082_8u2
+*******
+.subckt XHMA_1090_78439369100_10u 1 2
+Rp 1 2 7876
+Cp 1 2 13.203p
+Rs 1 N3 0.011
+L1 N3 2 10.09u
+.ends XHMA_1090_78439369100_10u
+*******
+.subckt XHMA_1090_78439369150_15u 1 2
+Rp 1 2 8204
+Cp 1 2 14.622p
+Rs 1 N3 0.0148
+L1 N3 2 14.546u
+.ends XHMA_1090_78439369150_15u
+*******
+.subckt XHMA_1510_78439370047_4u7 1 2
+Rp 1 2 4296
+Cp 1 2 22.242p
+Rs 1 N3 0.0031
+L1 N3 2 4.217u
+.ends XHMA_1510_78439370047_4u7
+*******
+.subckt XHMA_1510_78439370068_6u8 1 2
+Rp 1 2 5066
+Cp 1 2 21.801p
+Rs 1 N3 0.0041
+L1 N3 2 6.111u
+.ends XHMA_1510_78439370068_6u8
+*******
+.subckt XHMA_1510_78439370082_8u2 1 2
+Rp 1 2 6284
+Cp 1 2 25.54p
+Rs 1 N3 0.0055
+L1 N3 2 8.328u
+.ends XHMA_1510_78439370082_8u2
+*******
+.subckt XHMA_1510_78439370100_10u 1 2
+Rp 1 2 5244
+Cp 1 2 29.045p
+Rs 1 N3 0.0064
+L1 N3 2 10.4u
+.ends XHMA_1510_78439370100_10u
+*******
+.subckt XHMA_1510_78439370150_15u 1 2
+Rp 1 2 7827
+Cp 1 2 24.013p
+Rs 1 N3 0.0105
+L1 N3 2 15.895u
+.ends XHMA_1510_78439370150_15u
+*******
+.subckt XHMA_1510_78439370220_22u 1 2
+Rp 1 2 8204
+Cp 1 2 26.195p
+Rs 1 N3 0.0125
+L1 N3 2 20.695u
+.ends XHMA_1510_78439370220_22u
+*******
+.subckt XHMA_1510_78439370330_33u 1 2
+Rp 1 2 10776
+Cp 1 2 27.127p
+Rs 1 N3 0.018
+L1 N3 2 31.904u
+.ends XHMA_1510_78439370330_33u
+*******
