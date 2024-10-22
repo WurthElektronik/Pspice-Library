@@ -1,4 +1,4 @@
-**Pspice Models for Würth Elektronik Products**
+**Pspice Library for Würth Elektronik Products**
 =
 
 ## Introduction
@@ -8,7 +8,7 @@ For how to use models in GitHub repository, you can refer to the help document i
 
 **Please read Disclaimer carefully before downloading and using Würth Elektronik Models.**
 
-**Note: Pspice Models in GitHub repository is always the latest.**
+**Note: Pspice Library in GitHub repository is always the latest.**
 
 ## Component Classification
 * WE - Automotive
