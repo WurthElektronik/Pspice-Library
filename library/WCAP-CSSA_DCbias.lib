@@ -3,13 +3,13 @@
 * Kinds:                 MLCCs Capacitors
 * Matchcode:             WCAP-CSSA DC bias
 * Library Type:          Pspice
-* Version:               rev22b
+* Version:               rev24a
 * Created/modified by:   Richard
-* Date and Time:         2022/10/13
+* Date and Time:         2024/10/10
 * Team:                  eiSos EDA Service  
 * Contact:               libraries@we-online.com
 **************************************************
-* Copyright(C) 2022 Würth Elektronik eiSos GmbH & Co. KG
+* Copyright(C) 2024 Würth Elektronik eiSos GmbH & Co. KG
 * All Rights Reserved.
 **************************************************
 * Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
@@ -25,7 +25,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -39,7 +39,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -53,7 +53,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -67,7 +67,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -81,7 +81,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -145,7 +145,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -159,7 +159,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -173,7 +173,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -187,7 +187,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -201,7 +201,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -215,7 +215,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -229,7 +229,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
@@ -243,7 +243,7 @@ Rs N001 1 {Rs}
 Ls N001 N002 {Ls}
 Vsense N003 N004 0
 GCap N002 2 VALUE { ((C0-Csat)*(1/(cosh(V(1,2)/Vth)))+Csat)*I(Vsense)-I(VRp) }
-Rp N005 2 {Rpar}
+Rp N005 2 {Rp}
 VRp 1 N005 0
 RGND2 2 0 1e24
 RGND1 0 N002 1e24
