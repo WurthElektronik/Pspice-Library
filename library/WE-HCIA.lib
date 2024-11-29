@@ -1,15 +1,15 @@
 **************************************************
-* Manufacturer:          Würth Elektronik 
-* Kinds:                 SMD Flat Wire High Current Inductor
-* Matchcode:             WE-HCIA
-* Library Type:          Pspice
-* Version:               rev22c
-* Created/modified by:   Ella
-* Date and Time:         2022-11-15
-* Team:                  eiSos EDA Service  
-* Contact:               libraries@we-online.com
+* Manufacturer:           Würth Elektronik
+* Kinds:                  SMD Flat Wire High Current Inductor
+* Matchcode:              WE-HCIA
+* Library Type:           Pspice
+* Version:                rev24a
+* Created/modified by:    Ella
+* Date and Time:          11/27/2024
+* Team:                   eiSos EDA Service  
+* Contact:                libraries@we-online.com
 **************************************************
-* Copyright(C) 2022 Würth Elektronik eiSos GmbH & Co. KG
+* Copyright(C) 2024 Würth Elektronik eiSos GmbH & Co. KG
 * All Rights Reserved.
 **************************************************
 * Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
@@ -136,4 +136,81 @@ Cp 1 2 1.69p
 Rs 1 N3 0.033
 L1 N3 2 8.728u
 .ends HCIA_7050_784314100_10u
+*******
+.subckt HCIA_7030_7843100055_0u52 1 2
+Rp 1 2 388.13
+Cp 1 2 1.529p
+Rs 1 N3 0.0034
+L1 N3 2 0.46184u
+.ends HCIA_7030_7843100055_0u52
+*******
+.subckt HCIA_7030_7843100115_1u15 1 2
+Rp 1 2 1051
+Cp 1 2 2.475p
+Rs 1 N3 0.0083
+L1 N3 2 1.078u
+.ends HCIA_7030_7843100115_1u15
+*******
+.subckt HCIA_7030_7843100150_1u5 1 2
+Rp 1 2 1289
+Cp 1 2 2.139p
+Rs 1 N3 0.0122
+L1 N3 2 1.43u
+.ends HCIA_7030_7843100150_1u5
+*******
+.subckt HCIA_7030_7843100200_2u 1 2
+Rp 1 2 1237
+Cp 1 2 1.753p
+Rs 1 N3 0.0145
+L1 N3 2 1.875u
+.ends HCIA_7030_7843100200_2u
+*******
+.subckt HCIA_7040_7843110022_0u22 1 2
+Rp 1 2 234.051
+Cp 1 2 0.863212p
+Rs 1 N3 0.0011
+L1 N3 2 0.218484u
+.ends HCIA_7040_7843110022_0u22
+*******
+.subckt HCIA_7040_7843110068_0u68 1 2
+Rp 1 2 506.656
+Cp 1 2 1.404p
+Rs 1 N3 0.003
+L1 N3 2 0.616415u
+.ends HCIA_7040_7843110068_0u68
+*******
+.subckt HCIA_7040_7843110100_1u 1 2
+Rp 1 2 592.205
+Cp 1 2 1.532p
+Rs 1 N3 0.0042
+L1 N3 2 0.927627u
+.ends HCIA_7040_7843110100_1u
+*******
+.subckt HCIA_7040_7843110150_1u5 1 2
+Rp 1 2 1089
+Cp 1 2 2.064p
+Rs 1 N3 0.0063
+L1 N3 2 1.383u
+.ends HCIA_7040_7843110150_1u5
+*******
+.subckt HCIA_7040_7843110220_2u2 1 2
+Rp 1 2 1479
+Cp 1 2 2.058p
+Rs 1 N3 0.0106
+L1 N3 2 2.146u
+.ends HCIA_7040_7843110220_2u2
+*******
+.subckt HCIA_7040_7843110330_3u3 1 2
+Rp 1 2 2048
+Cp 1 2 2.251p
+Rs 1 N3 0.0158
+L1 N3 2 3.264u
+.ends HCIA_7040_7843110330_3u3
+*******
+.subckt HCIA_7040_7843110470_4u7 1 2
+Rp 1 2 2883
+Cp 1 2 2.373p
+Rs 1 N3 0.0172
+L1 N3 2 4.215u
+.ends HCIA_7040_7843110470_4u7
 *******
