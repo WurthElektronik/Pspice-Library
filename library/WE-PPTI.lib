@@ -1902,7 +1902,7 @@ Rg19	5	0	20meg
 Rg20	4	0	20meg	
 .ends
 
-subckt	PPTI_1308_750319690		1  2  3  6  5  4	
+.subckt	PPTI_1308_750319690		1  2  3  6  5  4	
 .param RxLkg=883ohm				
 .param Leakage=0.43uh				
 Rlkg	1	1a	{RxLkg/2}	
