@@ -1,15 +1,15 @@
 **************************************************
-* Manufacturer:           Wurth Elektronik 
+* Manufacturer:           Würth Elektronik
 * Kinds:                  SMT Common Mode Line Filter 
 * Matchcode:              WE-SL1
 * Library Type:           Pspice
-* Version:                rev22a
+* Version:                rev25a
 * Created/modified by:    Ella      
-* Date and Time:          2022-05-26
+* Date and Time:          2025-09-08
 * Team:                   eiSos EDA Service  
 * Contact:                libraries@we-online.com
 **************************************************
-* Copyright(C) 2022 Würth Elektronik eiSos GmbH & Co. KG
+* Copyright(C) 2025 Würth Elektronik eiSos GmbH & Co. KG
 * All Rights Reserved.
 **************************************************
 * Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
@@ -18,64 +18,7 @@
 * Würth Elektronik eiSos reserves the right to make any adjustments at any time without notice.
 * Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.
 **************************************************
-.SUBCKT  SL1    1  2  3  4  PARAMS:
-+ Rdc=0.18
-+ ck=2.46pF
-+ L1=67.72u
-+ L2=28.42u
-+ L3=17.39u
-+ L4=5.27u
-+ C1=0.441p
-+ Rs1=704.83
-+ Rs2=690.79
-+ Rs3=689.89
-+ Rs4=698.14
-+ R2=6.2
-+ dL3=73.02nH
-+ dC3=0.332pF
-+ dR3=4.91
-+ dR4=2342.19
-L3 N004 N003 {L3} 
-R50 N004 N003 {Rs3}
-C1 4 N500 {C1} 
-R500 N500 N002 {R2}
-L7 4 N005 {L1} 
-R51 4 N005 {Rs1}
-L5 N005 N004 {L2} 
-R52 N005 N004 {Rs2}
-L4 N011 N010 {L3} 
-R53 N011 N010 {Rs3}
-C2 3 N501 {C1} 
-R501 N501 N009 {R2}
-L8 3 N012 {L1} 
-R54 3 N012 {Rs1}
-L6 N012 N011 {L2} 
-R55 N012 N011 {Rs2}
-L2 N010 N009 {L4} 
-R56 N010 N009 {Rs4}
-L1 N003 N002 {L4} 
-R57 N003 N002 {Rs4}
-R17 N001 1 {Rdc}
-R18 N007 2 {Rdc}
-R14 N002 N001 {dR4}
-C3 N002 N502 {dC3} 
-R502 N502 N001 {dR3}
-L9 N006 N001 {dL3}
-L10 N007 N008 {dL3}
-C4 N006 N008 {ck}
-C5 N009 N503 {dC3} 
-R503 N503 N007 {dR3}
-R15 N009 N007 {dR4}
-L11 N002 N006 {dL3}
-L12 N008 N009 {dL3}
-K2 L3 L4 1
-K3 L5 L6 1
-K4 L7 L8 1
-K1 L1 L2 1
-K5 L9 L10 L11 L12 1
-.ends SL1
-
-.SUBCKT  WE-SL1_744212100_10u    1  2  3  4  
+.SUBCKT  SL1_744212100_10u    1  2  3  4  
 X1  1  2  3  4  SL1  PARAMS:
 + L1=7.65u
 + L2=0.56u
@@ -93,9 +36,9 @@ X1  1  2  3  4  SL1  PARAMS:
 + dR4=3904
 + Rdc=0.153
 + ck=0.405pF
-.ends WE-SL1_744212100_10u
-
-.SUBCKT  WE-SL1_744212470_47u    1  2  3  4  
+.ends SL1_744212100_10u
+*********
+.SUBCKT  SL1_744212470_47u    1  2  3  4  
 X1  1  2  3  4  SL1  PARAMS:
 + Rdc=0.106
 + ck=1.52pF
@@ -113,9 +56,9 @@ X1  1  2  3  4  SL1  PARAMS:
 + dC3=0.221pF
 + dR3=2.09
 + dR4=903.16
-.ends WE-SL1_744212470_47u
-
-.SUBCKT  WE-SL1_744212510_51u    1  2  3  4  
+.ends SL1_744212470_47u
+*********
+.SUBCKT  SL1_744212510_51u    1  2  3  4  
 X1  1  2  3  4  SL1  PARAMS:
 + Rdc=0.106
 + ck=1.52pF
@@ -133,9 +76,9 @@ X1  1  2  3  4  SL1  PARAMS:
 + dC3=0.350pF
 + dR3=2.79
 + dR4=850.8
-.ends WE-SL1_744212510_51u
-
-.SUBCKT  WE-SL1_744212820_82u    1  2  3  4  
+.ends SL1_744212510_51u
+*********
+.SUBCKT  SL1_744212820_82u    1  2  3  4  
 X1  1  2  3  4  SL1  PARAMS:
 + Rdc=0.12
 + ck=1.52pF
@@ -153,9 +96,9 @@ X1  1  2  3  4  SL1  PARAMS:
 + dC3=0.434pF
 + dR3=2.99
 + dR4=1153.55
-.ends WE-SL1_744212820_82u
-
-.SUBCKT  WE-SL1_744212101_100u    1  2  3  4  
+.ends SL1_744212820_82u
+*********
+.SUBCKT  SL1_744212101_100u    1  2  3  4  
 X1  1  2  3  4  SL1  PARAMS:
 + dL3=38.34nH
 + dC3=0.294pF
@@ -173,9 +116,9 @@ X1  1  2  3  4  SL1  PARAMS:
 + Rs3=296.6
 + Rs4=281.33
 + R2=10.41
-.ends WE-SL1_744212101_100u
-
-.SUBCKT  WE-SL1_744212181_180u    1  2  3  4  
+.ends SL1_744212101_100u
+*********
+.SUBCKT  SL1_744212181_180u    1  2  3  4  
 X1  1  2  3  4  SL1  PARAMS:
 + dL3=58.81nH
 + dC3=0.569pF
@@ -193,9 +136,9 @@ X1  1  2  3  4  SL1  PARAMS:
 + Rs3=580.20
 + Rs4=557.03
 + R2=13.23
-.ends WE-SL1_744212181_180u
-
-.SUBCKT  WE-SL1_744212221_220u    1  2  3  4  
+.ends SL1_744212181_180u
+*********
+.SUBCKT  SL1_744212221_220u    1  2  3  4  
 X1  1  2  3  4  SL1  PARAMS:
 + Rdc=0.18
 + ck=2.46pF
@@ -213,9 +156,9 @@ X1  1  2  3  4  SL1  PARAMS:
 + dC3=0.332pF
 + dR3=4.91
 + dR4=2342.19
-.ends WE-SL1_744212221_220u
-
-.SUBCKT  WE-SL1_744212331_330u    1  2  3  4  PARAMS:
+.ends SL1_744212221_220u
+*********
+.SUBCKT  SL1_744212331_330u    1  2  3  4  PARAMS:
 + dL3=84.50nH
 + dC3=0.726pF
 + dR3=3.34
@@ -274,10 +217,77 @@ C58 N003 N002 {dC5}
 L14 N011 N010 {dL5} 
 R59 N011 N010 {dR5} 
 C59 N011 N010 {dC5}
+K1 L1 L2 1
 K2 L3 L4 1
 K3 L5 L6 1
 K4 L7 L8 1
-K1 L1 L2 1
-K5 L9 L10 L11 L12 1
 K5 L13 L14 1
-.ends WE-SL1_744212331_330u
+K6a L9 L10 1
+K6b L9 L11 1
+K6c L9 L12 1
+K6d L10 L11 1
+K6e L10 L12 1
+K6f L11 L12 1
+.ends SL1_744212331_330u
+*********
+.SUBCKT  SL1    1  2  3  4  PARAMS:
++ Rdc=0.18
++ ck=2.46pF
++ L1=67.72u
++ L2=28.42u
++ L3=17.39u
++ L4=5.27u
++ C1=0.441p
++ Rs1=704.83
++ Rs2=690.79
++ Rs3=689.89
++ Rs4=698.14
++ R2=6.2
++ dL3=73.02nH
++ dC3=0.332pF
++ dR3=4.91
++ dR4=2342.19
+L3 N004 N003 {L3} 
+R50 N004 N003 {Rs3}
+C1 4 N500 {C1} 
+R500 N500 N002 {R2}
+L7 4 N005 {L1} 
+R51 4 N005 {Rs1}
+L5 N005 N004 {L2} 
+R52 N005 N004 {Rs2}
+L4 N011 N010 {L3} 
+R53 N011 N010 {Rs3}
+C2 3 N501 {C1} 
+R501 N501 N009 {R2}
+L8 3 N012 {L1} 
+R54 3 N012 {Rs1}
+L6 N012 N011 {L2} 
+R55 N012 N011 {Rs2}
+L2 N010 N009 {L4} 
+R56 N010 N009 {Rs4}
+L1 N003 N002 {L4} 
+R57 N003 N002 {Rs4}
+R17 N001 1 {Rdc}
+R18 N007 2 {Rdc}
+R14 N002 N001 {dR4}
+C3 N002 N502 {dC3} 
+R502 N502 N001 {dR3}
+L9 N006 N001 {dL3}
+L10 N007 N008 {dL3}
+C4 N006 N008 {ck}
+C5 N009 N503 {dC3} 
+R503 N503 N007 {dR3}
+R15 N009 N007 {dR4}
+L11 N002 N006 {dL3}
+L12 N008 N009 {dL3}
+K1 L1 L2 1
+K2 L3 L4 1
+K3 L5 L6 1
+K4 L7 L8 1
+K6a L9 L10 1
+K6b L9 L11 1
+K6c L9 L12 1
+K6d L10 L11 1
+K6e L10 L12 1
+K6f L11 L12 1
+.ends SL1
