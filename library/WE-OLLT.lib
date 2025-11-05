@@ -2,14 +2,14 @@
 * Manufacturer:           Würth Elektronik
 * Kinds:                  Offline Flyback Transformers for Linear Technology
 * Matchcode:              WE-OLLT
-* Library Type:           LTspice
-* Version:                rev24a
+* Library Type:           Pspice
+* Version:                rev25a
 * Created/modified by:    Roberta      
-* Date and Time:          2024-05-22
+* Date and Time:          2025-11-05
 * Team:                   eiSos EDA Service  
 * Contact:                libraries@we-online.com
 **************************************************	
-* Copyright(C) 2024 Würth Elektronik eiSos GmbH & Co. KG	
+* Copyright(C) 2025 Würth Elektronik eiSos GmbH & Co. KG	
 * All Rights Reserved.	
 **************************************************	
 * Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy	
@@ -233,13 +233,14 @@ Rg13	12	0	20meg
 Rg19	10	0	20meg	
 Rg20	9	0	20meg	
 Rg21	8	0	20meg	
-.ends				
+.ends	
+			
 .subckt	OLLT_ETD34_750811330		2  4  6  7  14  10  13  9  12  8	
-.param RxLkg=730.3ohm				
-.param Leakage=0.8uh				
+.param RxLkg=3195.05ohm				
+.param Leakage=3.5uh				
 Rlkg	2	2a	{RxLkg}	
 L_Lkg	2	2a	{Leakage}	
-Lpri1	2a	2b	299.2uH	
+Lpri1	2a	2b	296.5uH	
 Rser1	2b	4	150mohm	
 Laux1	6	6a	8.333uH	
 Rser3	6a	7	33mohm	
@@ -265,7 +266,8 @@ Rg13	12	0	20meg
 Rg19	10	0	20meg	
 Rg20	9	0	20meg	
 Rg21	8	0	20meg	
-.ends				
+.ends	
+			
 .subckt	OLLT_ER2814_750817251		1  3  2  4  5  6  11  9  10  8	
 .param RxLkg=5070.93ohm				
 .param Leakage=3uh				
