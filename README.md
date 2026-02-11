@@ -6,6 +6,8 @@ PSpice is a SPICE circuit simulator application for the simulation and verificat
 
 For how to use models in GitHub repository, you can refer to the help document in this folder.
 
+If you have any advice or questions, please send email to libraries@we-online.com
+
 **Please read Disclaimer carefully before downloading and using Würth Elektronik Models.**
 
 **Note: Pspice Library in GitHub repository is always the latest.**
