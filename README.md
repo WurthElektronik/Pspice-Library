@@ -1,68 +1,17 @@
-**Pspice Library for Würth Elektronik Products**
-=
-
+`Pspice Simulation Libraries for Würth Elektronik Products`
+=========
 ## Introduction
-PSpice is a SPICE circuit simulator application for the simulation and verification of analog and mixed-signal circuits. It integrates easily with Cadence PCB schematic entry solutions like OrCAD Capture and comes with an easy-to-use graphical user interface.
+Welcome to Würth Elektronik LTspice Simulation Library repository. <br>
+The libraries are created and maintained by Würth Elektronik EDA Team, for any questions and suggestions please feel free to contact EDA team by email: <libraries@we-online.com>
 
-For how to use models in GitHub repository, you can refer to the help document in this folder.
+## Library Component Coverage
 
-**Please contact libraries@we-online.com if there is any problem.**
+* Optoelectronic Components <br>
+_Infrared & Ultraviolet, Laser, Lighting LEDs, Phototransistors, Optocoupler, Signal LEDs_
 
-**Please read Disclaimer carefully before downloading and using Würth Elektronik Models.**
+* Passive Components <br>
+_Capacitors, Crystals & Oscillators, EMC & RFI Components, Inductors, Resistors, Signal & Communications, Transformers_
 
-**Note: Pspice Library in GitHub repository is always the latest.**
-
-## Component Classification
-* WE - Automotive
-  
-  * Common Mode Chokes
-  * Ferrites
-  * Filter Chokes
-  * Power Inductors
-  * RF Inductors
-* WE - Capacitors
-
-  * Electrolytic
-  * Film
-  * MLCC
-  * Polymer
-  * Super
-* WE - EMC Components
-
-  * Common Mode Chokes
-  * ESD Protection
-  * Ferrites
-  * Filter Chokes
-  * Line Filter
-  * Surge Protection
-* WE - Power Magnetics
-
-  * Coupled 
-  * Dual Coil
-  * EMC Components
-  * High Voltage
-  * PFC Choke
-  * Shielded
-  * UnShielded
-  * Transformers
-  * WirelessPower
-* WE - Optoelectronic Components
-
-  * Infrared & Ultraviolet LEDs
-  * Laser
-  * Lighting LEDs
-  * Optocoupler
-  * Photodiodes
-  * Phototransistors
-  * Signal LEDs
-* WE - Resistors
-
-  * Metal Plate Resistors
-  * Thick Film Resistors  
-* WE - Signal & Communications
-
-  * AS Interface Inductors
-  * Filter
-  * RF Inductors
-  * Transformers
-
+## More Library Repositories Provided By Würth Elektronik
+**PCB Library**: [Altium](https://github.com/WurthElektronik/Altium-Library), [Cadence](https://github.com/WurthElektronik/Cadence-Library), [Eagle](https://github.com/WurthElektronik/Eagle-Library), [KiCad](https://github.com/WurthElektronik/KiCad-Library)    <br>
+**Simulation Library**: [ADS](https://github.com/WurthElektronik/ADS-Library), [Ansys](https://github.com/WurthElektronik/Ansys-Library), [IBIS](https://github.com/WurthElektronik/IBIS-Library), [LTspice](https://github.com/WurthElektronik/LTspice-Library.git), [Qspice](https://github.com/WurthElektronik/Qspice-Library)
