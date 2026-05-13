@@ -5,11 +5,11 @@
 * Library Type:           Pspice
 * Version:                rev25a
 * Created/modified by:    Ella
-* Date and Time:          5/22/2025
+* Date and Time:          5/12/2026
 * Team:                   eiSos EDA Service  
 * Contact:                libraries@we-online.com
 **************************************************
-* Copyright(C) 2025 Würth Elektronik eiSos GmbH & Co. KG
+* Copyright(C) 2026 Würth Elektronik eiSos GmbH & Co. KG
 * All Rights Reserved.
 **************************************************
 * Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
@@ -213,6 +213,13 @@ Cp 1 2 6.913p
 Rs 1 N3 0.443
 L1 N3 2 88.257u
 .ends LQSA_6045_78404064101_100u
+*******
+.subckt LQSA_8040_78404084005_0u5 1 2
+Rp 1 2 1447
+Cp 1 2 1.467p
+Rs 1 N3 0.007
+L1 N3 2 0.484318u
+.ends LQSA_8040_78404084005_0u5
 *******
 .subckt LQSA_8040_78404084010_1u 1 2
 Rp 1 2 2130
