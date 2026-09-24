@@ -1,15 +1,15 @@
 **************************************************
-* Manufacturer:           Wurth Elektronik 
+* Manufacturer:           Würth Elektronik
 * Kinds:                  SMT Infrared Sideview LED Waterclear
 * Matchcode:              WL-SISW
 * Library Type:           Pspice
-* Version:                rev22a
+* Version:                rev26a
 * Created/modified by:    Ella      
-* Date and Time:          2022-06-13
+* Date and Time:          2026-09-24
 * Team:                   eiSos EDA Service  
 * Contact:                libraries@we-online.com
 **************************************************
-* Copyright(C) 2022 Würth Elektronik eiSos GmbH & Co. KG
+* Copyright(C) 2026 Würth Elektronik eiSos GmbH & Co. KG
 * All Rights Reserved.
 **************************************************
 * Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
@@ -19,7 +19,7 @@
 * Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.
 **************************************************
 .subckt SISW_0402_15404085BA470 1 2 
-D1 2 1 led
+D1 1 2 led
 .MODEL led D
 + IS=5.4129E-12
 + N=2.4754
@@ -33,7 +33,7 @@ D1 2 1 led
 .ends
 ****************
 .subckt SISW_0402_15404094BA470 1 2 
-D1 2 1 led
+D1 1 2 led
 .MODEL led D
 + IS=282.34E-18
 + N=1.4095
@@ -48,7 +48,7 @@ D1 2 1 led
 .ends
 ****************
 .subckt SISW_1002_15410285AA170 1 2 
-D1 2 1 led
+D1 1 2 led
 .MODEL led D
 + IS=84.387E-18
 + N=1.7270
@@ -62,7 +62,7 @@ D1 2 1 led
 .ends
 ****************
 .subckt SISW_1002_15410294AA570 1 2 
-D1 2 1 led
+D1 1 2 led
 .MODEL led D
 + IS=10.000E-21
 + N=1.0644
@@ -76,7 +76,7 @@ D1 2 1 led
 .ends
 ****************
 .subckt SISW_1104_15411485AA370 1 2 
-D1 2 1 led
+D1 1 2 led
 .MODEL led D
 + IS=278.34E-15
 + N=2.1529
@@ -90,7 +90,7 @@ D1 2 1 led
 .ends
 ****************
 .subckt SISW_1104_15411494AA570 1 2 
-D1 2 1 led
+D1 1 2 led
 .MODEL led D
 + IS=505.44E-18
 + N=1.4511
@@ -104,7 +104,7 @@ D1 2 1 led
 .ends
 ****************
 .subckt SISW_1106_15411085A4570 1 2 
-D1 2 1 led
+D1 1 2 led
 .MODEL led D
 + IS=553.57E-18
 + N=1.7089
@@ -118,7 +118,7 @@ D1 2 1 led
 .ends
 ****************
 .subckt SISW_1106_15411094A6070 1 2 
-D1 2 1 led
+D1 1 2 led
 .MODEL led D
 + IS=541.60E-18
 + N=1.5662
@@ -132,7 +132,7 @@ D1 2 1 led
 .ends
 ****************
 .subckt SISW_1206_15412085A2070 1 2 
-D1 2 1 led
+D1 1 2 led
 .MODEL led D
 + IS=10.000E-21
 + N=1.2396
@@ -146,7 +146,7 @@ D1 2 1 led
 .ends
 ****************
 .subckt SISW_1206_15412094A2070 1 2 
-D1 2 1 led
+D1 1 2 led
 .MODEL led D
 + IS=1.5912E-15
 + N=1.5362
@@ -159,14 +159,32 @@ D1 2 1 led
 + IBV=10.00E-6
 .ends
 ****************
-
-
-
-
-
-
-
-
-
-
-
+.subckt SISW_1206_15412085A2070R 1 2 
+D1 1 2 led
+.MODEL led D
++ IS=34.967E-12
++ N=2.7343
++ RS=1.6240
++ CJO=1.0000E-12
++ M=.3333
++ VJ=.75
++ BV=5
++ IBV=10.00E-6
++ TT=5.0000E-9
+.ends
+****************
+.subckt SISW_1206_15412094A2070R 1 2 
+D1 1 2 led
+.MODEL led D
++ IS=10.514E-21
++ N=.88602
++ RS=1.7815
++ IKF=991.26E-9
++ CJO=1.0000E-12
++ M=.3333
++ VJ=.75
++ BV=5
++ IBV=10.00E-6
++ TT=5.0000E-9
+.ends
+****************
