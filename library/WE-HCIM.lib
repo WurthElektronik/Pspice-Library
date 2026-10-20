@@ -1,0 +1,202 @@
+**************************************************
+* Manufacturer:           Würth Elektronik
+* Kinds:                  SMT Power Inductor
+* Matchcode:              WE-HCIM
+* Library Type:           Pspice
+* Version:                rev26a
+* Created/modified by:    Ella
+* Date and Time:          10/20/2026
+* Team:                   eiSos EDA Service  
+* Contact:                libraries@we-online.com
+**************************************************
+* Copyright(C) 2026 Würth Elektronik eiSos GmbH & Co. KG
+* All Rights Reserved.
+**************************************************
+* Disclaimer: While Würth Elektronik eiSos has made every reasonable effort to ensure the accuracy
+* of the simulation models provided, Würth Elektronik eiSos does not guarantee the exemption of error on
+* the simulation models, nor does Würth Elektronik eiSos guarantee that the simulation model is current.
+* Würth Elektronik eiSos reserves the right to make any adjustments at any time without notice.
+* Würth Elektronik eiSos expressly disclaims all implied warranties regarding this simulation model.
+**************************************************
+.subckt HCIM_050406_74432050406060_60n 1 2
+Rp 1 2 135.064
+Cp 1 2 3.176p
+Rs 1 N3 0.00023
+L1 N3 2 0.061219u
+.ends
+*******
+.subckt HCIM_050406_74432050406085_85n 1 2
+Rp 1 2 136.592
+Cp 1 2 3.09p
+Rs 1 N3 0.00023
+L1 N3 2 0.085u
+.ends
+*******
+.subckt HCIM_070506_74432070506060_60n 1 2
+Rp 1 2 154.804
+Cp 1 2 2.435p
+Rs 1 N3 0.00012
+L1 N3 2 0.06u
+.ends
+*******
+.subckt HCIM_070506_74432070506085_85n 1 2
+Rp 1 2 160.702
+Cp 1 2 2.438p
+Rs 1 N3 0.00014
+L1 N3 2 0.085u
+.ends
+*******
+.subckt HCIM_080506_74432080506085_85n 1 2 3 4
+Rp1 1 2 138.599
+Cp1 1 2 3.637p
+Rs1 1 N1 0.0047
+L1 N1 2 0.085u
+
+Rp2 3 4 138.599
+Cp2 3 4 3.637p
+Rs2 3 N2 0.0047
+L2 N2 4 0.085u
+
+Rq1 1 0 100meg
+Rq2 2 0 100meg
+Rq3 3 0 100meg
+Rq4 4 0 100meg
+.ends
+*******
+.subckt HCIM_100605_74432100605080_80n 1 2 3 4
+Rp1 1 2 110.268
+Cp1 1 2 5.355p
+Rs1 1 N1 0.0079
+L1 N1 2 0.08u
+
+Rp2 3 4 110.268
+Cp2 3 4 5.355p
+Rs2 3 N2 0.0079
+L2 N2 4 0.08u
+
+Rq1 1 0 100meg
+Rq2 2 0 100meg
+Rq3 3 0 100meg
+Rq4 4 0 100meg
+.ends
+*******
+.subckt HCIM_100706_74432100706060_60n 1 2 3 4
+Rp1 1 2 170.61
+Cp1 1 2 3.543p
+Rs1 1 N1 0.0095
+L1 N1 2 0.06u
+
+Rp2 3 4 170.61
+Cp2 3 4 3.543p
+Rs2 3 N2 0.0095
+L2 N2 4 0.06u
+
+Rq1 1 0 100meg
+Rq2 2 0 100meg
+Rq3 3 0 100meg
+Rq4 4 0 100meg
+.ends
+*******
+.subckt HCIM_100706_74432100706085_85n 1 2 3 4
+Rp1 1 2 175.414
+Cp1 1 2 4.678p
+Rs1 1 N1 0.023
+L1 N1 2 0.085u
+
+Rp2 3 4 175.414
+Cp2 3 4 4.678p
+Rs2 3 N2 0.023
+L2 N2 4 0.085u
+
+Rq1 1 0 100meg
+Rq2 2 0 100meg
+Rq3 3 0 100meg
+Rq4 4 0 100meg
+.ends
+*******
+.subckt HCIM_100806_74432100806030_30n 1 2 3 4 5 6 7 8
+Rp 1 2 212.1
+Cp 1 2 3.659p
+Rs 1 N3 0.036
+L1 N3 2 0.03u
+
+Rp2 3 4 212.1
+Cp2 3 4 3.659p
+Rs2 3 N4 0.036
+L2 N4 4 0.03u
+
+Rp3 5 6 212.1
+Cp3 5 6 3.659p
+Rs3 5 N5 0.036
+L3 N5 6 0.03u
+
+Rp4 7 8 212.1
+Cp4 7 8 3.659p
+Rs4 7 N6 0.036
+L4 N6 8 0.03u
+
+Rq1 1 0 100meg
+Rq2 2 0 100meg
+Rq3 3 0 100meg
+Rq4 4 0 100meg
+Rq5 5 0 100meg
+Rq6 6 0 100meg
+Rq7 7 0 100meg
+Rq8 8 0 100meg
+.ends
+*******
+.subckt HCIM_100806_74432100806085_85n 1 2 3 4 5 6 7 8
+Rp1 1 2 125.19
+Cp1 1 2 4.862p
+Rs1 1 N3 0.046
+L1  N3 2 0.085u
+
+Rp2 3 4 125.19
+Cp2 3 4 4.862p
+Rs2 3 N4 0.046
+L2  N4 4 0.085u
+
+Rp3 5 6 125.19
+Cp3 5 6 4.862p
+Rs3 5 N5 0.046
+L3  N5 6 0.085u
+
+Rp4 7 8 125.19
+Cp4 7 8 4.862p
+Rs4 7 N6 0.046
+L4  N6 8 0.085u
+
+Rq1 1 0 100meg
+Rq2 2 0 100meg
+Rq3 3 0 100meg
+Rq4 4 0 100meg
+Rq5 5 0 100meg
+Rq6 6 0 100meg
+Rq7 7 0 100meg
+Rq8 8 0 100meg
+.ends
+*******
+.subckt HCIM_110407_74432110407085_85n 1  2  3  4  PARAMS:
++  Cww=28.69p
++  Rp1=171.538
++  Cp1=2.95p
++  Lp1=0.085u
++  Rp2=183.823
++  Cp2=2.748p
++  Lp2=0.085u
++  RDC1=0.057
++  RDC2=0.057
++  K=0.938710003455932
+C_C1 2 1 {Cww/2}
+R_R50 2 1 5000g
+C_C2 3 4 {Cww/2}
+C_C5 3 2 {Cp1}
+R_R1 3 N05454 {RDC1}
+R_R2 3 2 {Rp1}
+L_L1 N05454 2 {Lp1}
+L_L2 N05750 1 {Lp2}
+C_C6 4 1 {Cp2}
+R_R3 4 1 {Rp2}
+R_R4 4 N05750 {RDC2}
+Kn_K1  L_L1  L_L2  {K}
+.ends
